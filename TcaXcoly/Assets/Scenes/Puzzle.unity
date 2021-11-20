@@ -160,7 +160,7 @@ MonoBehaviour:
     prefab: {fileID: 1605272641497993237, guid: 284ce69cc7f0cbb4da41231fd4c8f90b, type: 3}
   - type: 1
     prefab: {fileID: 5985423985332543959, guid: 4df268a7edec6a44da53062eca5f3078, type: 3}
-  backgroundPrefab: {fileID: 2956842955966585851, guid: 076a49b10e953dc47911b964c7ae3c01, type: 3}
+  backgroundPrefab: {fileID: 126596, guid: 7f6f2c7afdf253744a92c6a16a1e125c, type: 3}
 --- !u!4 &344036323
 Transform:
   m_ObjectHideFlags: 0

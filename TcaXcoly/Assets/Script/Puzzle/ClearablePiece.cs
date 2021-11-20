@@ -1,51 +1,54 @@
-using System.Collections;
 using UnityEngine;
+using System.Collections;
 
 public class ClearablePiece : MonoBehaviour
 {
 
-    public AnimationClip clearAnimation;
+	public AnimationClip clearAnimation;
 
-    private bool isBeingCleared = false;
+	private bool isBeingCleared = false;
 
-    public bool IsBeingCleared
-    {
-        get { return isBeingCleared; }
-    }
+	public bool IsBeingCleared
+	{
+		get { return isBeingCleared; }
+	}
 
-    protected GamePieces piece;
+	protected GamePieces piece;
 
-     void Awake()
-    {
-        piece = GetComponent<GamePieces>();   
-    }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+	void Awake()
+	{
+		piece = GetComponent<GamePieces>();
+	}
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    public void Clear()
-    {
-        isBeingCleared = true;
-        StartCoroutine(ClearCoroutine());
-    }
-    private IEnumerator ClearCoroutine()
-    {
+	// Use this for initialization
+	void Start()
+	{
 
-        Animator animator = GetComponent<Animator>();
-        if (animator)
-        {
-            animator.Play(clearAnimation.name);
+	}
 
-            yield return new WaitForSeconds(clearAnimation.length);
+	// Update is called once per frame
+	void Update()
+	{
 
-            Destroy(gameObject);
-        }
-    }
+	}
+
+	public void Clear()
+	{
+		isBeingCleared = true;
+		StartCoroutine(ClearCoroutine());
+	}
+
+	private IEnumerator ClearCoroutine()
+	{
+		Animator animator = GetComponent<Animator>();
+
+		if (animator)
+		{
+			animator.Play(clearAnimation.name);
+
+			yield return new WaitForSeconds(clearAnimation.length);
+
+			Destroy(gameObject);
+		}
+	}
 }
