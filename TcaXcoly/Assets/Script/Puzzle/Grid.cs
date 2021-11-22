@@ -22,6 +22,8 @@ public class Grid : MonoBehaviour
 	public int xDim;
 	public int yDim;
 	public float fillTime;
+	
+	public Boss boss;
 
 	public PiecePrefab[] piecePrefabs;
 	public GameObject backgroundPrefab;
@@ -68,6 +70,7 @@ public class Grid : MonoBehaviour
 
 
 		StartCoroutine(Fill());
+		
 	}
 
 	// Update is called once per frame
@@ -499,14 +502,16 @@ public class Grid : MonoBehaviour
 						{
 							if (ClearPiece(match[i].X, match[i].Y))
 							{
+	     
 								needsRefill = true;
+				             boss.Damage();
 							}
 						}
 					}
 				}
 			}
 		}
-
+		
 		return needsRefill;
 	}
 
@@ -518,6 +523,7 @@ public class Grid : MonoBehaviour
 			SpawnNewPiece(x, y, PieceType.EMPTY);
 
 			return true;
+			
 		}
 
 		return false;
