@@ -6,6 +6,7 @@ public class Boss : MonoBehaviour
 {
     public static float healthAmount;
 
+    [SerializeField] private GameObject PanelWin;
     Grid grid;
 
    
@@ -24,8 +25,8 @@ public class Boss : MonoBehaviour
         if(healthAmount <= 0)
            {
             Destroy(gameObject);
-            
-           }
+            PanelWin.SetActive(true);
+        }
 
         
     }
