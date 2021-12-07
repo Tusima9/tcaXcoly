@@ -29,6 +29,7 @@ public class Grid : MonoBehaviour
 	public GameObject backgroundPrefab;
 
 	private Dictionary<PieceType, GameObject> piecePrefabDict;
+	[SerializeField] private GameObject tutorial;
 
 	private GamePieces[,] pieces;
 
@@ -40,6 +41,13 @@ public class Grid : MonoBehaviour
 	// Use this for initialization
 	void Start()
 	{
+        tutorial.SetActive(true);
+		
+		
+		//switch to 2436 * 1125
+		//Screen.SetResolution(2436, 1125,true);
+		Screen.orientation = ScreenOrientation.Portrait;
+		
 		piecePrefabDict = new Dictionary<PieceType, GameObject>();
 
 		for (int i = 0; i < piecePrefabs.Length; i++)
@@ -542,4 +550,9 @@ public class Grid : MonoBehaviour
 			ClearPiece(y, column);
 		}
 	}
+
+	public void NextImage()
+    {
+		
+    }
 }

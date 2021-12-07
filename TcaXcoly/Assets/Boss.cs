@@ -25,6 +25,7 @@ public class Boss : MonoBehaviour
         if(healthAmount <= 0)
            {
             Destroy(gameObject);
+            
             PanelWin.SetActive(true);
         }
 

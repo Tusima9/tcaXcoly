@@ -1,0 +1,31 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+[System.Serializable]
+public class Stat
+{
+
+    [SerializeField]
+    private float baseValue;
+
+
+
+    public float GetValue()
+    {
+        return baseValue;
+        
+    }
+
+   
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}
