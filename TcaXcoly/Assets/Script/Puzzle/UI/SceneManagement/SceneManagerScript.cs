@@ -3,6 +3,12 @@ using UnityEngine.SceneManagement;
 
 public class SceneManagerScript : MonoBehaviour
 {
+    private void Start()
+    {
+        Vector3 cameraRightMiddle = Camera.main.ViewportToWorldPoint(new Vector2(1f, 0.5f));
+        cameraRightMiddle.z = transform.position.z;
+        transform.position = cameraRightMiddle;
+    }
     public void JumpToMain( )
     {
         SceneManager.LoadSceneAsync( 1 );

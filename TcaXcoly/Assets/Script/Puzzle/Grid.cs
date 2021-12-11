@@ -41,12 +41,12 @@ public class Grid : MonoBehaviour
 	// Use this for initialization
 	void Start()
 	{
-        tutorial.SetActive(true);
+        //tutorial.SetActive(true);
 		
 		
 		//switch to 2436 * 1125
 		//Screen.SetResolution(2436, 1125,true);
-		Screen.orientation = ScreenOrientation.Portrait;
+		//Screen.orientation = ScreenOrientation.PortraitUpsideDown;
 		
 		piecePrefabDict = new Dictionary<PieceType, GameObject>();
 
@@ -211,8 +211,8 @@ public class Grid : MonoBehaviour
 
 	public Vector2 GetWorldPosition(int x, int y)
 	{
-		return new Vector2(transform.position.x - xDim / 2.0f + x,
-			transform.position.y + yDim / 2.0f - y);
+		return new Vector2((transform.position.x - xDim / 2.0f + x)/1.7f,
+			(transform.position.y + yDim / 2.0f - y)/2f - 3.5f);
 	}
 
 	public GamePieces SpawnNewPiece(int x, int y, PieceType type)
