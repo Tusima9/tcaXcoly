@@ -9,6 +9,8 @@ public class Grid : MonoBehaviour
 	{
 		EMPTY,
 		NORMAL,
+		ROW_CLEAR,
+		COLUMN_CLEAR,
 		COUNT,
 	};
 
@@ -27,6 +29,9 @@ public class Grid : MonoBehaviour
 
 	public PiecePrefab[] piecePrefabs;
 	public GameObject backgroundPrefab;
+	[SerializeField]
+	public GameObject backgroundSize;
+	public Vector3 sizeChange;
 
 	private Dictionary<PieceType, GameObject> piecePrefabDict;
 	[SerializeField] private GameObject tutorial;
@@ -41,12 +46,12 @@ public class Grid : MonoBehaviour
 	// Use this for initialization
 	void Start()
 	{
-        tutorial.SetActive(true);
+       // tutorial.SetActive(true);
 		
 		
 		//switch to 2436 * 1125
-		//Screen.SetResolution(2436, 1125,true);
-		Screen.orientation = ScreenOrientation.Portrait;
+	//Screen.SetResolution(2436, 1125,true);
+		//Screen.orientation = ScreenOrientation.Portrait;
 		
 		piecePrefabDict = new Dictionary<PieceType, GameObject>();
 
@@ -64,6 +69,7 @@ public class Grid : MonoBehaviour
 			{
 				GameObject background = (GameObject)Instantiate(backgroundPrefab, GetWorldPosition(x, y), Quaternion.identity);
 				background.transform.parent = transform;
+				backgroundSize.transform.localScale = backgroundSize.transform.localScale - sizeChange;
 			}
 		}
 
@@ -213,6 +219,8 @@ public class Grid : MonoBehaviour
 	{
 		return new Vector2(transform.position.x - xDim / 2.0f + x,
 			transform.position.y + yDim / 2.0f - y);
+		
+		
 	}
 
 	public GamePieces SpawnNewPiece(int x, int y, PieceType type)
