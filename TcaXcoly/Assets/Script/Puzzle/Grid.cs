@@ -512,7 +512,7 @@ public class Grid : MonoBehaviour
 							{
 	     
 								needsRefill = true;
-				             boss.Damage();
+				             boss.TakeDamage(30);
 							}
 						}
 					}
@@ -551,8 +551,5 @@ public class Grid : MonoBehaviour
 		}
 	}
 
-	public void NextImage()
-    {
-		
-    }
+	
 }
