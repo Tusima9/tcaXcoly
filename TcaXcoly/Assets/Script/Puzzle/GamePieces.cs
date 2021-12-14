@@ -5,6 +5,7 @@ public class GamePieces : MonoBehaviour
 {
 	private int x;
 	private int y;
+	//private int DamageValue = 10;
 
 	public int X
 	{
@@ -64,6 +65,7 @@ public class GamePieces : MonoBehaviour
 	{
 		get { return clearableComponent; }
 	}
+	
 
 	void Awake()
 	{
@@ -90,6 +92,7 @@ public class GamePieces : MonoBehaviour
 		y = _y;
 		grid = _grid;
 		type = _type;
+		//DamageValue = _damageValue;
 	}
 
 	void OnMouseEnter()

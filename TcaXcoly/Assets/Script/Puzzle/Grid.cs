@@ -41,6 +41,7 @@ public class Grid : MonoBehaviour
 	// Use this for initialization
 	void Start()
 	{
+		
         //tutorial.SetActive(true);
 		
 		
@@ -72,6 +73,7 @@ public class Grid : MonoBehaviour
 		{
 			for (int y = 0; y < yDim; y++)
 			{
+				
 				SpawnNewPiece(x, y, PieceType.EMPTY);
 			}
 		}
@@ -202,6 +204,7 @@ public class Grid : MonoBehaviour
 				pieces[x, 0].Init(x, -1, this, PieceType.NORMAL);
 				pieces[x, 0].MovableComponent.Move(x, 0, fillTime);
 				pieces[x, 0].ColorComponent.SetColor((ColorPiece.ColorType)Random.Range(0, pieces[x, 0].ColorComponent.NumColors));
+			//	pieces[x, 0].
 				movedPiece = true;
 			}
 		}
@@ -280,6 +283,7 @@ public class Grid : MonoBehaviour
 
 	public List<GamePieces> GetMatch(GamePieces piece, int newX, int newY)
 	{
+		
 		if (piece.IsColored())
 		{
 			ColorPiece.ColorType color = piece.ColorComponent.Color;
@@ -368,6 +372,7 @@ public class Grid : MonoBehaviour
 					if (verticalPieces.Count < 2)
 					{
 						verticalPieces.Clear();
+						boss.TakeDamage(10);
 					}
 					else
 					{
@@ -390,6 +395,7 @@ public class Grid : MonoBehaviour
 			// so now check vertically
 			horizontalPieces.Clear();
 			verticalPieces.Clear();
+			
 			verticalPieces.Add(piece);
 
 			for (int dir = 0; dir <= 1; dir++)
@@ -470,6 +476,8 @@ public class Grid : MonoBehaviour
 					if (horizontalPieces.Count < 2)
 					{
 						horizontalPieces.Clear();
+						boss.TakeDamage(20);
+						
 					}
 					else
 					{
@@ -512,7 +520,7 @@ public class Grid : MonoBehaviour
 							{
 	     
 								needsRefill = true;
-				             boss.TakeDamage(30);
+				          //   boss.TakeDamage(30);
 							}
 						}
 					}
@@ -528,6 +536,7 @@ public class Grid : MonoBehaviour
 		if (pieces[x, y].IsClearable() && !pieces[x, y].ClearableComponent.IsBeingCleared)
 		{
 			pieces[x, y].ClearableComponent.Clear();
+			
 			SpawnNewPiece(x, y, PieceType.EMPTY);
 
 			return true;

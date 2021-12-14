@@ -6,8 +6,8 @@ public class ScreenSize : MonoBehaviour
 {
 
     private GameObject canvas;
-    float xFactor = Screen.width / 1125f;
-    float yFactor = Screen.height / 2436f;
+    //float xFactor = Screen.width / 1125f;
+ //1   float yFactor = Screen.height / 2436f;
     // Start is called before the first frame update
     void Start()
     {

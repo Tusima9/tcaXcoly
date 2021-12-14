@@ -76,14 +76,19 @@ MonoBehaviour:
   colorSprites:
   - color: 0
     sprite: {fileID: -3764606112446205402, guid: b791b002ce6432440a190855effbe1b0, type: 3}
+    Damage: 0
   - color: 1
     sprite: {fileID: 2334058370391378245, guid: b791b002ce6432440a190855effbe1b0, type: 3}
+    Damage: 0
   - color: 2
     sprite: {fileID: -2318465335023300856, guid: b791b002ce6432440a190855effbe1b0, type: 3}
+    Damage: 0
   - color: 3
     sprite: {fileID: -594768970013472418, guid: b791b002ce6432440a190855effbe1b0, type: 3}
+    Damage: 0
   - color: 4
     sprite: {fileID: 4037032431678940811, guid: b791b002ce6432440a190855effbe1b0, type: 3}
+    Damage: 0
 --- !u!61 &915257772
 BoxCollider2D:
   m_ObjectHideFlags: 0

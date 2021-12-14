@@ -20,7 +20,9 @@ public class ColorPiece : MonoBehaviour
 	{
 		public ColorType color;
 		public Sprite sprite;
+		public int Damage;
 	};
+
 
 	public ColorSprite[] colorSprites;
 
@@ -76,4 +78,5 @@ public class ColorPiece : MonoBehaviour
 			sprite.sprite = colorSpriteDict[newColor];
 		}
 	}
+
 }
