@@ -5,21 +5,15 @@ public class PanelControl : MonoBehaviour
     //パネルをゲットする
     [SerializeField] private GameObject PanelUI;
 
-    void Start()
-    {
-        ClosePanel( );
-    }
 
-    //パネルを開く
+    //パネルを開閉する
     public void OpenPanel( )
     {
-        PanelUI.SetActive( true );
-    }
-
-    //パネルを閉じる
-    public void ClosePanel()
-    {
-        PanelUI.SetActive( false );
+        if (PanelUI != null)
+        {
+            bool isActive = PanelUI.activeSelf;
+            PanelUI.SetActive(!isActive);
+        }
     }
 
 }
