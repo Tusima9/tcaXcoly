@@ -14,6 +14,7 @@ public class PanelControl : MonoBehaviour
             bool isActive = PanelUI.activeSelf;
             PanelUI.SetActive(!isActive);
         }
+    
     }
 
 }
