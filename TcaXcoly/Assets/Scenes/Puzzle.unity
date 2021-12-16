@@ -2485,6 +2485,7 @@ GameObject:
   m_Component:
   - component: {fileID: 710770805}
   - component: {fileID: 710770806}
+  - component: {fileID: 710770807}
   m_Layer: 0
   m_Name: PieceDestructionSound
   m_TagString: Untagged
@@ -2602,6 +2603,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &710770807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 710770804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1388338d24de4a14eade40dd8b44f8ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &734471259
 GameObject:
   m_ObjectHideFlags: 0
@@ -4326,9 +4339,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 1342619109}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7d71c45765d3e244bad160bb70befab6, type: 3}
+  m_Script: {fileID: 11500000, guid: a58f162d3d73acb469c84a9904835d3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bgm: {fileID: 866206060}
+  bgmBoss: {fileID: 155339575}
+  PieceDestructionTemplate: {fileID: 710770807}
+  StartingPitch: 1
+  incrementPitch: 0.1
+  pieceMouvement: {fileID: 744012166}
+  skillReady: {fileID: 136824693}
+  skillUse: {fileID: 340442748}
+  PlayerHit: {fileID: 268585222}
+  stageTransition: {fileID: 1953677168}
+  stageClear: {fileID: 1935981421}
+  stageFailed: {fileID: 1755736401}
+  tap: {fileID: 349975051}
+  tapBack: {fileID: 137427038}
+  tapError: {fileID: 734471261}
 --- !u!4 &1342619111
 Transform:
   m_ObjectHideFlags: 0
@@ -5090,6 +5118,7 @@ GameObject:
   - component: {fileID: 1774748944}
   - component: {fileID: 1774748943}
   - component: {fileID: 1774748942}
+  - component: {fileID: 1774748945}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -5145,6 +5174,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1774748945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1774748941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1511ccae7919cfc46b603b9b337fdc94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1803786758
 GameObject:
   m_ObjectHideFlags: 0
