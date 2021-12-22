@@ -51,7 +51,7 @@ namespace Assets.Scripts.Data
     [Serializable]
     public struct GameJson
     {
-        public Game[] games;// array of all the possibl game
+        public Game[] games;// array of all the possible game
     }
 
 
@@ -60,7 +60,7 @@ namespace Assets.Scripts.Data
     {
         public string gameName; // game name displayed
 
-        public int maxAllowedTurn; // max number of turn allowed in this round --> may not be used 
+     //   public int maxAllowedTurn; // max number of turn allowed in this round --> may not be used 
 
         public Stage[] stages; // detail of stages that occur in the game
 
@@ -71,11 +71,9 @@ namespace Assets.Scripts.Data
     [Serializable]
     public struct Stage
     {
-        public string spriteID; //sprite ID for the enemy
+        public string EnemyID; //sprite ID for the enemy
 
-        public string[] effectiveSkill; //array of skill effective against this enemy
-
-        public int Condition; // condition for kill this enemy
+        public int enemyHP; //  hp for kill this enemy
     }
 
 }
