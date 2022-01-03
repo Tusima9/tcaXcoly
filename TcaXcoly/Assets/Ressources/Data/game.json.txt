@@ -1,0 +1,45 @@
+
+"games":[{
+    "name":"Stage1",
+    "gameId":"g1-s1",
+    "stageList": [{
+        "spriteId":"gaikotu_honoo",
+        "enemyHp" :1000,
+        "spriteId":"gaikotu_mizu",
+        "enemyHp" :1000,
+        "spriteId":"gaikotu_kaze",
+        "enemyHp" :1000,
+    },
+    {
+        "spriteId":"kyoudaigaikotu_boss",
+        "enemyHp" :2000,
+    }
+  ]
+},
+{
+    "name":"Stage2",
+    "gameId":"g2-s2",
+    "stageList": [{
+        "spriteId":"zonbi_honoo",
+        "enemyHp" :1500,
+        "spriteId":"zonbi_mizu",
+        "enemyHp" :1500,
+        "spriteId":"zonbi_kaze",
+        "enemyHp" :1500,
+    },
+    {
+        "spriteId":"kyoudaizonbi_boss",
+        "enemyHp" :3000,
+    }
+  ]
+},
+{
+    "name":"Stage3",
+    "gameId":"g3-s3",
+    "stageList": [{
+        "spriteId":"sinigami_boss",
+        "enemyHp" :10000,
+    } 
+  ]
+},
+]
