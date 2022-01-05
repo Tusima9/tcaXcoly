@@ -2,27 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Assets.Scripts.Puzzle.Sound
+namespace Assets.Script.Puzzle.Sound
 {
     //sound in minigame
-public class SoundSystem : MonoBehaviour
-{
+    public class SoundSystem : MonoBehaviour
+    {
         public static SoundSystem instance;
 
         public AudioSource bgm; //background music
-        
-        public AudioSource bgmBoss; // boss background music
 
+        public AudioSource bgmBoss; // boss background music
 
         public PieceDestructionSFX PieceDestructionTemplate; // template for the PieceDestructionSFX sound player
 
         public int StartingPitch = 1; //starting pitch for destruction sound
 
-            public float incrementPitch = 0.1f; // incresement of pitch per combo
+        public float incrementPitch = 0.1f; // incresement of pitch per combo
 
         public AudioSource pieceMouvement; //sound when moving piece
 
-        public AudioSource skillReady; // sound when the kill is ready 
+        public AudioSource skillReady; // sound when the kill is ready
 
         public AudioSource skillUse; //Sound when the skill is used
 
@@ -36,13 +35,12 @@ public class SoundSystem : MonoBehaviour
 
         public AudioSource tap; // sound when you click on the screen
 
-        public AudioSource tapBack; // sound when you get back 
+        public AudioSource tapBack; // sound when you get back
 
         public AudioSource tapError; // sound when their is an error
 
         public void Start()
         {
-
             instance = this;
 
             PieceDestructionTemplate.SetEternal();
@@ -84,15 +82,17 @@ public class SoundSystem : MonoBehaviour
             bgmBoss.Pause();
             stageFailed.Play();
         }
-     
+
         public void PlayTapSFX()// play the tap sfx
         {
             tap.Play();
         }
+
         public void PlayTapBackSFX()// play the tap back sfx
         {
             tapBack.Play();
         }
+
         public void PlayTapErrorSFX()// play the tap error sfx
         {
             tapError.Play();
@@ -110,9 +110,5 @@ public class SoundSystem : MonoBehaviour
 
             pdsfx.PlaySound(StartingPitch + incrementPitch * match, delay); // play sfx for certain pitch and delay on the cloned sound system
         }
-
-
-
-
     }
 }

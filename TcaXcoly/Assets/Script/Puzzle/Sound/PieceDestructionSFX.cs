@@ -2,15 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
-namespace Assets.Scripts.Puzzle.Sound
+namespace Assets.Script.Puzzle.Sound
 {
     [RequireComponent(typeof(AudioSource))]
-public class PieceDestructionSFX : MonoBehaviour
-{
+    public class PieceDestructionSFX : MonoBehaviour
+    {
         private float selfDestruct = 0; // self destruction timer
 
-        private float selfDestructLimit = 1; // self destruction lifespan 
+        private float selfDestructLimit = 1; // self destruction lifespan
 
         public void SetEternal() // instance for not self destruction
         {
@@ -19,7 +18,7 @@ public class PieceDestructionSFX : MonoBehaviour
 
         public void Update() // check for self destruction per frame till destroyed
         {
-            if(selfDestruct < selfDestructLimit)
+            if (selfDestruct < selfDestructLimit)
             {
                 selfDestruct += Time.deltaTime;
             }
@@ -30,14 +29,11 @@ public class PieceDestructionSFX : MonoBehaviour
         }
 
         //play match sound
-        public void PlaySound(float pitch, float delay) 
+        public void PlaySound(float pitch, float delay)
         {
             GetComponent<AudioSource>().pitch = pitch;
             GetComponent<AudioSource>().PlayDelayed(delay);
             selfDestructLimit += delay; // prolong this instance for delay seconds
-        
         }
-
     }
-
 }
