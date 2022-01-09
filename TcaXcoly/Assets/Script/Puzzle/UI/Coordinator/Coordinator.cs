@@ -6,7 +6,7 @@ namespace Assets.Script.Puzzle.Coordinator
 {
     public class Coordinator : MonoBehaviour
     {
-        private static List<UI.Canvas.Character> characters = new List<UI.Canvas.Character>();
+        private static List<CharacterBase> characters = new List<CharacterBase>();
 
         private static bool roundProgressing = false;
 
@@ -22,7 +22,7 @@ namespace Assets.Script.Puzzle.Coordinator
 
         private static int damage;
 
-        public static void RegisterCharacter(UI.Canvas.Character character)
+        public static void RegisterCharacter(CharacterBase character)
         {
             characters.Add(character);
         }
@@ -43,8 +43,8 @@ namespace Assets.Script.Puzzle.Coordinator
 
             if (validRound)
             {
-                bool roundDepleted = UI.Canvas.HealthBar.instance.PlayerLost();
-                bool dead = UI.Canvas.Enemy.instance.TakeDamage(damage); //attack ennemy and see if he die
+                bool roundDepleted = HealthBar.instance.PlayerLost();
+                bool dead = UI.Canvas.Enemy.instance.Attack(skillUsed, EnemyHp);
 
                 if (dead)
                 {
@@ -69,7 +69,7 @@ namespace Assets.Script.Puzzle.Coordinator
             }
             if (!ended)
             {
-                foreach (UI.Canvas.Character character in characters)
+                foreach (CharacterBase character in characters)
                 {
                     character.ReactivateSkill();
                 }
@@ -119,7 +119,7 @@ namespace Assets.Script.Puzzle.Coordinator
             return !dialogActive;
         }
 
-        public static List<UI.Canvas.Character> GetCharacters()
+        public static List<CharacterBase> GetCharacters()
         {
             return characters;
         }
@@ -137,7 +137,7 @@ namespace Assets.Script.Puzzle.Coordinator
         private static void ResetStatics()
         {
             Reset();
-            TeamMagager.Reset();
+            TeamManager.Reset();
             StageManager.Reset();
         }
     }
