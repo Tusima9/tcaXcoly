@@ -5,14 +5,22 @@
     "stageList": [{
         "spriteId":"gaikotu_honoo",
         "enemyHp" :1000,
+        "enemyAttack" :10,
+        "enemyDefence" :100,
         "spriteId":"gaikotu_mizu",
         "enemyHp" :1000,
+        "enemyAttack" :10,
+        "enemyDefence" :100,
         "spriteId":"gaikotu_kaze",
         "enemyHp" :1000,
+        "enemyAttack" :10,
+        "enemyDefence" :100,
     },
     {
         "spriteId":"kyoudaigaikotu_boss",
         "enemyHp" :2000,
+        "enemyAttack" :50,
+        "enemyDefence" :200,
     }
   ]
 },
@@ -22,14 +30,22 @@
     "stageList": [{
         "spriteId":"zonbi_honoo",
         "enemyHp" :1500,
+        "enemyAttack" :15,
+        "enemyDefence" :150,
         "spriteId":"zonbi_mizu",
         "enemyHp" :1500,
+        "enemyAttack" :15,
+        "enemyDefence" :150,
         "spriteId":"zonbi_kaze",
         "enemyHp" :1500,
+        "enemyAttack" :15,
+        "enemyDefence" :150,
     },
     {
         "spriteId":"kyoudaizonbi_boss",
         "enemyHp" :3000,
+        "enemyAttack" :80,
+        "enemyDefence" :300,
     }
   ]
 },
@@ -39,6 +55,8 @@
     "stageList": [{
         "spriteId":"sinigami_boss",
         "enemyHp" :10000,
+        "enemyAttack" :150,
+        "enemyDefence" :400,
     } 
   ]
 },

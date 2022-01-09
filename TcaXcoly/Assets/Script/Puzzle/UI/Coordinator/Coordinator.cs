@@ -20,7 +20,7 @@ namespace Assets.Script.Puzzle.Coordinator
 
         private static bool playerLost = false;
 
-        private static int EnemyHp;
+        private static int damage;
 
         public static void RegisterCharacter(UI.Canvas.Character character)
         {
@@ -44,7 +44,7 @@ namespace Assets.Script.Puzzle.Coordinator
             if (validRound)
             {
                 bool roundDepleted = UI.Canvas.HealthBar.instance.PlayerLost();
-                bool dead = UI.Canvas.Enemy.instance.Attack(skillUsed, EnemyHp);
+                bool dead = UI.Canvas.Enemy.instance.TakeDamage(damage); //attack ennemy and see if he die
 
                 if (dead)
                 {
@@ -76,6 +76,11 @@ namespace Assets.Script.Puzzle.Coordinator
             }
             roundProgressing = false;
             skillUsedInCurrentRound = false;
+        }
+
+        public static void NotifyDialogActive()
+        {
+            dialogActive = true;
         }
 
         public static void NotifyDialogDeactive()

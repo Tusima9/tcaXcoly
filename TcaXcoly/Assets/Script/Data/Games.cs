@@ -6,7 +6,6 @@ using UnityEngine;
 
 namespace Assets.Scripts.Data
 {
-
     public static class Games // data class concerning loading and giving away game data involving stages
     {
         private static Game[] loadedGames;
@@ -48,32 +47,36 @@ namespace Assets.Scripts.Data
             return loadedGames[gameIndex].gameUUID;
         }
     }
+
     [Serializable]
     public struct GameJson
     {
         public Game[] games;// array of all the possible game
     }
 
-
     [Serializable]
     public struct Game //format of 1 game
     {
         public string gameName; // game name displayed
 
-     //   public int maxAllowedTurn; // max number of turn allowed in this round --> may not be used 
+        //   public int maxAllowedTurn; // max number of turn allowed in this round --> may not be used
 
         public Stage[] stages; // detail of stages that occur in the game
 
         public string gameUUID; // uuid of the game
-
-
     }
+
     [Serializable]
     public struct Stage
     {
         public string EnemyID; //sprite ID for the enemy
 
         public int enemyHP; //  hp for kill this enemy
-    }
 
+        public int enemyAttack;
+
+        public int enemyDefence;
+
+        public int turnBeforeAttack;
+    }
 }
