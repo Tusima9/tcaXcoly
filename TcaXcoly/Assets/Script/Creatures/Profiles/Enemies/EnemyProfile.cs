@@ -7,4 +7,7 @@ public class EnemyProfile : Profile
 {
     [Header("Enemy")]
     public int statspoints = 5;
+
+    public Statistic attack;
+    public Statistic defense;
 }
