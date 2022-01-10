@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87f307fac25a1eb4aa78535bf21701e9, type: 3}
+  m_Name: Kelly
+  m_EditorClassIdentifier: 
+  name: Kelly
+  visualObject: {fileID: 0}
+  portrait: {fileID: 21300000, guid: aff7efc71f30ff243a99ea04c42b6258, type: 3}
+  life:
+    myStat: 0
+    currentValue: 0
+    maxValue: 50
+  mana:
+    myStat: 1
+    currentValue: 0
+    maxValue: 50
+  attack:
+    myStat: 2
+    currentValue: 1
+    maxValue: 50
+  defense:
+    myStat: 3
+    currentValue: 1
+    maxValue: 50
