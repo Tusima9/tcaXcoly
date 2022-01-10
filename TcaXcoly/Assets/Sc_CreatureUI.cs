@@ -16,7 +16,8 @@ public class Sc_CreatureUI : MonoBehaviour
 
         public void UpdateDisplay(Sc_Creature creature)
         {
-            statValueText.text = creature.GetState(thisStat).Value + "/" + creature.GetState(thisStat).MaxValue;
+            //statValueText.text = creature.GetState(thisStat).Value + "/" + creature.GetState(thisStat).MaxValue;
+
             if (StatBar != null)
             {
                 StatBar.maxValue = creature.GetState(thisStat).MaxValue;
@@ -47,7 +48,7 @@ public class Sc_CreatureUI : MonoBehaviour
     private void Start()
     {
         Sc_EventManager.instance.onUpdateStats.AddListener(SetInfo);
-        displayCreaturePortrait.sprite = myCreature.profile.portrait;
+        //displayCreaturePortrait.sprite = myCreature.profile.portrait; // portrait of the creature we dont use that since we call only the sprite
         if (myCreature.GetComponent<Sc_Player>())
         {
             Sc_EventManager.instance.onGrowStat.AddListener(GrowStat);
@@ -97,8 +98,8 @@ public class Sc_CreatureUI : MonoBehaviour
         {
             item.UpdateDisplay(myCreature);
         }
-        creatureName.text = myCreature.profile.name;
-        attackValue.text = myCreature.GetAttack.Value + "";
-        defenseValue.text = myCreature.GetDefense.Value + "";
+        //  creatureName.text = myCreature.profile.name;
+        //  attackValue.text = myCreature.GetAttack.Value + "";
+        //   defenseValue.text = myCreature.GetDefense.Value + "";
     }
 }
