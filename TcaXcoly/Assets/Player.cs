@@ -11,30 +11,29 @@ public class Player : MonoBehaviour
     [SerializeField] private GameObject PanelLoose;
 
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         currentHealth = maxHealth;
-        healthBar.SetMaxHeath(maxHealth);
+        // healthBar.SetMaxHeath(maxHealth);
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
             TakeDamage(20);
 
-          if (currentHealth <= 0)
-          {
-           PanelLoose.SetActive(true);
-          }
-
+            if (currentHealth <= 0)
+            {
+                PanelLoose.SetActive(true);
+            }
         }
     }
 
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-        healthBar.SetHealth(currentHealth);
+        // healthBar.SetHealth(currentHealth);
     }
 }

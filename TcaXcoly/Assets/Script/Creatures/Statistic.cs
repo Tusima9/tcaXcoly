@@ -5,18 +5,20 @@ using UnityEngine;
 
 public enum StatType
 {
+    ID,
     HP,
     MP,
     Attack,
     Defense,
+    Skill,
 }
 
 [Serializable]
 public class Statistic
 {
     public StatType myStat;
-    [SerializeField] float currentValue;
-    [SerializeField] float maxValue = 50;
+    [SerializeField] private float currentValue;
+    [SerializeField] private float maxValue = 50;
 
     public float Value
     {

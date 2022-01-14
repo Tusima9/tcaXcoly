@@ -13,6 +13,8 @@ public class Sc_CreatureUI : MonoBehaviour
         public StatType thisStat;
         public Text statValueText;
         public Slider StatBar;
+        public Gradient gradient;
+        public Image fill;
 
         public void UpdateDisplay(Sc_Creature creature)
         {
@@ -22,6 +24,8 @@ public class Sc_CreatureUI : MonoBehaviour
             {
                 StatBar.maxValue = creature.GetState(thisStat).MaxValue;
                 StatBar.value = creature.GetState(thisStat).Value;
+                fill.color = gradient.Evaluate(StatBar.normalizedValue);
+                fill.color = gradient.Evaluate(1f);
             }
         }
     }

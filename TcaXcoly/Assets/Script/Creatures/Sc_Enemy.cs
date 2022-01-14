@@ -5,7 +5,10 @@ using DG.Tweening;
 
 public class Sc_Enemy : Sc_Creature
 {
-    EnemyProfile myProfile => profile as EnemyProfile;
+    [SerializeField]
+    public int TurnLeftBeforeAction;
+
+    private EnemyProfile myProfile => profile as EnemyProfile;
 
     public override void Awake()
     {

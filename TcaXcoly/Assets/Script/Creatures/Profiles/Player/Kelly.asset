@@ -13,21 +13,21 @@ MonoBehaviour:
   m_Name: Kelly
   m_EditorClassIdentifier: 
   name: Kelly
-  visualObject: {fileID: 0}
+  visualObject: {fileID: 5247174807744651317, guid: 700383307f029444d9da7ed17dcd9aec, type: 3}
   portrait: {fileID: 21300000, guid: aff7efc71f30ff243a99ea04c42b6258, type: 3}
   life:
-    myStat: 0
-    currentValue: 0
-    maxValue: 50
-  mana:
     myStat: 1
     currentValue: 0
     maxValue: 50
+  mana:
+    myStat: 0
+    currentValue: 0
+    maxValue: 1001
   attack:
-    myStat: 2
-    currentValue: 1
-    maxValue: 50
-  defense:
     myStat: 3
+    currentValue: 200
+    maxValue: 200
+  defense:
+    myStat: 4
     currentValue: 1
     maxValue: 50

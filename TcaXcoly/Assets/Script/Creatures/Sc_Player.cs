@@ -6,7 +6,7 @@ using System;
 
 public class Sc_Player : Sc_Creature
 {
-    PlayerProfile myProfile => profile as PlayerProfile;
+    private PlayerProfile myProfile => profile as PlayerProfile;
 
     public override void Awake()
     {

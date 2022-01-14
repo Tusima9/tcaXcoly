@@ -16,15 +16,15 @@ MonoBehaviour:
   visualObject: {fileID: 6050264124101044879, guid: 97e76697fec61f842b8d8cf4f35449d8, type: 3}
   portrait: {fileID: 6692928432143536399, guid: 1166d12e3a3a15943bb97eabc8cf2b1d, type: 3}
   life:
-    myStat: 0
+    myStat: 1
     currentValue: 0
     maxValue: 1000
-  statspoints: 5
+  statspoints: 10
   attack:
-    myStat: 0
+    myStat: 3
     currentValue: 0
     maxValue: 10
   defense:
-    myStat: 0
+    myStat: 4
     currentValue: 0
     maxValue: 100
