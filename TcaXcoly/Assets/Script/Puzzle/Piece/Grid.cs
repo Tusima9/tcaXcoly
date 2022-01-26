@@ -218,7 +218,7 @@ public class Grid : MonoBehaviour
     public Vector2 GetWorldPosition(int x, int y)
     {
         return new Vector2((transform.position.x - xDim / 2.0f + x) / 1.7f,
-            (transform.position.y + yDim / 2.0f - y) / 2f - 3.5f);
+            (transform.position.y + yDim / 2.0f - y) / 1.7f - 3.4f);
     }
 
     public GamePieces SpawnNewPiece(int x, int y, PieceType type)

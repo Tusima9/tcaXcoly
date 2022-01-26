@@ -29,6 +29,5 @@ public class Sc_Enemy : Sc_Creature
     public override void Death()
     {
         base.Death();
-        Sc_EventManager.instance.onWin.Invoke(true);
     }
 }

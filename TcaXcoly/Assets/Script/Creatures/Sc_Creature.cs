@@ -56,7 +56,7 @@ public abstract class Sc_Creature : MonoBehaviour
     private IEnumerator Attack(Sc_Creature target)
     {
         yield return new WaitForSeconds(1);
-        // anim.SetTrigger("Attack");
+        anim.SetTrigger("Attack");
         yield return new WaitForSeconds(0.1f);
         float calculateDamage = GetAttack.Value - target.GetDefense.Value;
         if (calculateDamage > 0)
