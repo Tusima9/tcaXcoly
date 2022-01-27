@@ -404,7 +404,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -607,7 +607,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 620693104}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8e39dcf1b338234f873f5f1bb912c00, type: 3}
+  m_Script: {fileID: 11500000, guid: 9b13c81ca17b5db49bd917b409fa21ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &620693107
@@ -655,7 +655,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 620693106}
-        m_TargetAssemblyTypeName: NextButtonScript, Assembly-CSharp
+        m_TargetAssemblyTypeName: NextButtonScript1, Assembly-CSharp
         m_MethodName: OnClick
         m_Mode: 1
         m_Arguments:
@@ -815,10 +815,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1206867051}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6c794fab980ab9499fa4daa0499f705, type: 3}
+  m_Script: {fileID: 11500000, guid: effc9575f5d71a241b989fb229f7e010, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _inkJsonAsset: {fileID: 4900000, guid: 90fac650929bf894a88605cc2aa6206c, type: 3}
+  _inkJsonAsset: {fileID: 4900000, guid: a70494b23abb25845b533ba4273ae5ff, type: 3}
   _textField: {fileID: 1863244791}
   _choiceButtonContainer: {fileID: 752540605}
   _choiceButtonPrefab: {fileID: 8123237520288979063, guid: 8180632649223c34cb70e2b5dd006911, type: 3}

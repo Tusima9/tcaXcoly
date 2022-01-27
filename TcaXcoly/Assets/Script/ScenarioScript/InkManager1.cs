@@ -5,7 +5,7 @@ using Ink.Runtime;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class InkManager : MonoBehaviour
+public class InkManager1 : MonoBehaviour
 {
     [SerializeField]
     private TextAsset _inkJsonAsset;
@@ -159,8 +159,8 @@ public class InkManager : MonoBehaviour
     }
     public void NextScene()
     {
-        
-        NextSceneToLoad = SceneManager.GetActiveScene().buildIndex +1;
+
+        NextSceneToLoad = SceneManager.GetActiveScene().buildIndex - 3;
         SceneManager.LoadScene(NextSceneToLoad);
     }
 
