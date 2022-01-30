@@ -1,0 +1,9 @@
+﻿{
+    "members": [
+        {
+            "uuid": "main_character",
+            "skillUUID": "1"
+        },
+        
+    ]
+}

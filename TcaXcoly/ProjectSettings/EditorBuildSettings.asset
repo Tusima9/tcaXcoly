@@ -12,9 +12,12 @@ EditorBuildSettings:
     path: Assets/Scenes/mainScene.unity
     guid: 5d5c8e0988c87c84cb30a4db18c4c99b
   - enabled: 1
-    path: Assets/Scenes/Scenario.unity
+    path: Assets/Scenes/FirstScenariobeforeBattle.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/Puzzle.unity
     guid: e8cc137936b4e9647b04d9becf901525
+  - enabled: 1
+    path: Assets/Scenes/FirstScenarioAfterBattle.unity
+    guid: 9c2bd908053f2174da9bc6ee893334b3
   m_configObjects: {}

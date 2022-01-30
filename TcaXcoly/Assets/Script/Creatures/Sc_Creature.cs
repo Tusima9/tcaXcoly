@@ -88,6 +88,8 @@ public abstract class Sc_Creature : MonoBehaviour
 
     public virtual void Death()
     {
+        
+        
         isDead = true;
         anim.SetBool("isDead", isDead);
     }
