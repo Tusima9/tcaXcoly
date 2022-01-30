@@ -19,12 +19,13 @@ public class EnemyStat : MonoBehaviour
         animator = GetComponentInChildren<Animator>( );
     }
 
-    public void SetData( string name, float hp, int atk, int def )
+    public void SetData( string name, int id, float hp, int atk, int def )
     {
         data.spriteId = name;
+        data.enemyId = id;
         data.enemyHp = hp;
         data.enemyAttack = atk;
-        data.enemyDefense = def;
+        data.enemyDefence = def;
 
         life.maxValue = hp;
 

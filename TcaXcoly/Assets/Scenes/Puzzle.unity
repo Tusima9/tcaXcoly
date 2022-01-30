@@ -142,7 +142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameManager: {fileID: 0}
   data:
-    spriteId: 
+    enemyId: 0
     enemyHp: 0
     enemyAttack: 0
     enemyDefense: 0
@@ -199,7 +199,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameManager: {fileID: 0}
   data:
-    spriteId: 
+    enemyId: 0
     enemyHp: 0
     enemyAttack: 0
     enemyDefense: 0
@@ -6032,7 +6032,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameManager: {fileID: 0}
   data:
-    spriteId: 
+    enemyId: 0
     enemyHp: 0
     enemyAttack: 0
     enemyDefense: 0
@@ -7460,6 +7460,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c90a3d57f23d347a5965730c964e80e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemyImages:
+  - {fileID: -8348046058630780042, guid: 1166d12e3a3a15943bb97eabc8cf2b1d, type: 3}
+  - {fileID: 6692928432143536399, guid: 1166d12e3a3a15943bb97eabc8cf2b1d, type: 3}
+  - {fileID: 21300000, guid: d5a6b726186fbf64ba35f3c3f1ebcb4a, type: 3}
+  - {fileID: 21300000, guid: bc760fe445e9ef54c8b442421a0dc28f, type: 3}
   stageId: 0
   wave: 0
   StageDataJsonReader: {fileID: 1882633812}

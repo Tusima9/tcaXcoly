@@ -1,6 +1,4 @@
-using System.Collections;
 using UnityEngine;
-
 
 public class GamePieces : MonoBehaviour
 {
@@ -105,7 +103,7 @@ public class GamePieces : MonoBehaviour
 	void OnMouseDown()
 	{
 		grid.PressPiece(this);
-		SoundSystem.instance.PlayTapSFX();
+		//SoundSystem.instance.PlayTapSFX();
 		
 	}
 

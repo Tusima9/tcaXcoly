@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class EnemyDataManager : MonoBehaviour
 {
+    [SerializeField] private Sprite[] enemyImages;
     [SerializeField] private int stageId;
     [SerializeField] private int wave;
     [SerializeField] private StageDataJsonReader StageDataJsonReader;
@@ -14,10 +15,11 @@ public class EnemyDataManager : MonoBehaviour
         StageDataJsonReader.RequestData( stageId, wave );
     }
 
-    public void SetEnemyData( int index, string name, float hp, int atk, int def )
+    public void SetEnemyData( int index, string name, int id, float hp, int atk, int def )
     {
-        enemies[index].SetData( name, hp, atk, def );
+        enemies[index].SetData( name, id, hp, atk, def );
         enemies[index].gameObject.SetActive( true );
+        enemies[index].transform.GetChild( 1 ).GetComponent<SpriteRenderer>( ).sprite = enemyImages[id];
     }
 
     public void DeactivateEnemy( int pos )
