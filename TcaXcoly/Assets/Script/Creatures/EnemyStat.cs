@@ -7,6 +7,8 @@ public class EnemyStat : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private Slider life;
     [SerializeField] private Text hpText;
+    public Gradient gradient;
+    public Image fill;
 
     private void Start( )
     {
@@ -44,6 +46,8 @@ public class EnemyStat : MonoBehaviour
     private void UpdateSliderValue( )
     {
         life.value = data.enemyHp;
+        fill.color = gradient.Evaluate(life.normalizedValue);
+        fill.color = gradient.Evaluate(1f);
         hpText.text = data.enemyHp.ToString( );
     }
 }
