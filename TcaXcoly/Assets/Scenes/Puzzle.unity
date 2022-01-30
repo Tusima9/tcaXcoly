@@ -123,6 +123,116 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &26497742 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4543611306438810808, guid: da239ded99ccc414aad3714e6a73ddcd, type: 3}
+  m_PrefabInstance: {fileID: 6325602893896417236}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &26497743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 26497742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc68e9ba2a7bb46b7bb3fdf588110c75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data:
+    spriteId: 
+    enemyHp: 0
+    enemyAttack: 0
+    enemyDefense: 0
+  animator: {fileID: 0}
+  life: {fileID: 772698280}
+  hpText: {fileID: 659529263}
+  gradient:
+    serializedVersion: 2
+    key0: {r: 0.93725497, g: 0.058823533, b: 0.11764707, a: 1}
+    key1: {r: 0.99215686, g: 0.8984227, b: 0.011764687, a: 1}
+    key2: {r: 0.017606761, g: 0.9433962, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 22937
+    ctime1: 43176
+    ctime2: 65535
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 1
+    m_NumColorKeys: 3
+    m_NumAlphaKeys: 2
+  fill: {fileID: 1735682043}
+--- !u!1 &56294184 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1425008363167983912, guid: f37729af10676f240a579f9ba8d2e6f7, type: 3}
+  m_PrefabInstance: {fileID: 2527013046310026294}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &56294185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 56294184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc68e9ba2a7bb46b7bb3fdf588110c75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data:
+    spriteId: 
+    enemyHp: 0
+    enemyAttack: 0
+    enemyDefense: 0
+  animator: {fileID: 0}
+  life: {fileID: 1715287670}
+  hpText: {fileID: 1369101097}
+  gradient:
+    serializedVersion: 2
+    key0: {r: 0.93725497, g: 0.058823533, b: 0.11764707, a: 1}
+    key1: {r: 0.99215686, g: 0.8984227, b: 0.011764687, a: 1}
+    key2: {r: 0.017606761, g: 0.9433962, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 22937
+    ctime1: 43176
+    ctime2: 65535
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 1
+    m_NumColorKeys: 3
+    m_NumAlphaKeys: 2
+  fill: {fileID: 1981609216}
 --- !u!1 &72430980
 GameObject:
   m_ObjectHideFlags: 0
@@ -3573,7 +3683,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 785832969}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bdc5ac64b2a057d44a07df400117667c, type: 3}
   m_Name: 
@@ -4341,7 +4451,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6325602894683309289, guid: da239ded99ccc414aad3714e6a73ddcd, type: 3}
   m_PrefabInstance: {fileID: 6325602893896417236}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 26497742}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c6ab7c24e658d6345811f2c76bdd7cda, type: 3}
@@ -5037,7 +5147,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1272614986}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bdc5ac64b2a057d44a07df400117667c, type: 3}
   m_Name: 
@@ -5463,7 +5573,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1419011567}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bdc5ac64b2a057d44a07df400117667c, type: 3}
   m_Name: 
@@ -5768,7 +5878,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1500006965
 GameObject:
@@ -5817,6 +5927,61 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1571134722 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 282055096720131095, guid: e13949d95d425b44fb19aa5071b392c8, type: 3}
+  m_PrefabInstance: {fileID: 676466068500332889}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1571134723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1571134722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc68e9ba2a7bb46b7bb3fdf588110c75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data:
+    spriteId: 
+    enemyHp: 0
+    enemyAttack: 0
+    enemyDefense: 0
+  animator: {fileID: 0}
+  life: {fileID: 1363701511}
+  hpText: {fileID: 1591450874}
+  gradient:
+    serializedVersion: 2
+    key0: {r: 0.93725497, g: 0.058823533, b: 0.11764707, a: 1}
+    key1: {r: 0.99215686, g: 0.8984227, b: 0.011764687, a: 1}
+    key2: {r: 0.017606761, g: 0.9433962, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 22937
+    ctime1: 43176
+    ctime2: 65535
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 1
+    m_NumColorKeys: 3
+    m_NumAlphaKeys: 2
+  fill: {fileID: 1058191259}
 --- !u!114 &1591450874 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 676466070005669283, guid: e13949d95d425b44fb19aa5071b392c8, type: 3}
@@ -6215,7 +6380,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2527013048007035967, guid: f37729af10676f240a579f9ba8d2e6f7, type: 3}
   m_PrefabInstance: {fileID: 2527013046310026294}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 56294184}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c6ab7c24e658d6345811f2c76bdd7cda, type: 3}
@@ -6382,7 +6547,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1751343063
 GameObject:
@@ -6927,7 +7092,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 676466069304678386, guid: e13949d95d425b44fb19aa5071b392c8, type: 3}
   m_PrefabInstance: {fileID: 676466068500332889}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1571134722}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c6ab7c24e658d6345811f2c76bdd7cda, type: 3}
@@ -6962,7 +7127,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1882633812
 MonoBehaviour:
@@ -6973,9 +7138,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1882633810}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a09499493c41a334693c7eb54f78b834, type: 3}
+  m_Script: {fileID: 11500000, guid: d823c3ec118ea473e9ba50edc4a0f1c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameDataJson: {fileID: 4900000, guid: 321d7bb766eb78e45ba5d253a7753748, type: 3}
+  EnemyDataManager: {fileID: 1927605322}
 --- !u!1 &1895393779
 GameObject:
   m_ObjectHideFlags: 0
@@ -7140,6 +7307,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1927605321}
+  - component: {fileID: 1927605322}
   m_Layer: 0
   m_Name: MonsterHandler
   m_TagString: Untagged
@@ -7162,8 +7330,25 @@ Transform:
   - {fileID: 1059650364}
   - {fileID: 1880348330}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1927605322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1927605320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c90a3d57f23d347a5965730c964e80e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StageDataJsonReader: {fileID: 1882633812}
+  enemies:
+  - {fileID: 56294185}
+  - {fileID: 26497743}
+  - {fileID: 1571134723}
 --- !u!1 &1935981419
 GameObject:
   m_ObjectHideFlags: 0
