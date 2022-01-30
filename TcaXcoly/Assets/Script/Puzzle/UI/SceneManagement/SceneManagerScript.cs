@@ -11,12 +11,12 @@ public class SceneManagerScript : MonoBehaviour
     }
     public void JumpToMain( )
     {
-        SceneManager.LoadSceneAsync( 1 );
+        SceneManager.LoadSceneAsync( 2 );
     }
 
     public void JumpToScenario( )
     {
-        SceneManager.LoadSceneAsync( 2 );
+        SceneManager.LoadSceneAsync( 1 );
     }
 
     public void JumpToPuzzle()
