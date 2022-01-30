@@ -175,7 +175,6 @@ public class GameManager : MonoBehaviour
 
     public void ChangeTargetEnemy( int index )
     {
-        index -= 1;
         target = currentEnemies[index];
         Debug.Log( "Current Target: " + index + target );
         ChangeTargetFramePos( index );
@@ -186,8 +185,9 @@ public class GameManager : MonoBehaviour
         targetFrame.localPosition = framePos[index];
     }
 
-    public void EnemyDestroyed( )
+    public void EnemyDestroyed( int index )
     {
+        currentEnemies[index] = null;
         target = null;
 
         for( int i = 0; i < 3; i++ )
@@ -195,11 +195,13 @@ public class GameManager : MonoBehaviour
             if( currentEnemies[i] != null)
             {
                 target = currentEnemies[i];
+                Debug.Log( "Current Target: " + i + target );
                 ChangeTargetFramePos( i );
                 return;
             }
         }
 
+        Debug.Log( "All Destroyed" );
         //to next wave or finish battle
     }
 }

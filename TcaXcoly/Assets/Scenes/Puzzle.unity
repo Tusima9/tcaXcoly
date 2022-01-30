@@ -146,6 +146,7 @@ MonoBehaviour:
     enemyHp: 0
     enemyAttack: 0
     enemyDefense: 0
+  selfNum: 0
   animator: {fileID: 0}
   life: {fileID: 772698280}
   hpText: {fileID: 659529263}
@@ -202,6 +203,7 @@ MonoBehaviour:
     enemyHp: 0
     enemyAttack: 0
     enemyDefense: 0
+  selfNum: 0
   animator: {fileID: 0}
   life: {fileID: 1715287670}
   hpText: {fileID: 1369101097}
@@ -2391,7 +2393,7 @@ Transform:
   m_LocalScale: {x: 0.80505157, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 1927605321}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &477218831
 SpriteRenderer:
@@ -6034,6 +6036,7 @@ MonoBehaviour:
     enemyHp: 0
     enemyAttack: 0
     enemyDefense: 0
+  selfNum: 0
   animator: {fileID: 0}
   life: {fileID: 1363701511}
   hpText: {fileID: 1591450874}
@@ -7435,10 +7438,10 @@ Transform:
   m_LocalPosition: {x: 665.43176, y: 652.02765, z: -92.07422}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 477218830}
   - {fileID: 1697296392}
   - {fileID: 1059650364}
   - {fileID: 1880348330}
+  - {fileID: 477218830}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8428,7 +8431,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 676466069304678387, guid: e13949d95d425b44fb19aa5071b392c8, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 676466069304678387, guid: e13949d95d425b44fb19aa5071b392c8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8534,7 +8537,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2527013048007035966, guid: f37729af10676f240a579f9ba8d2e6f7, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2527013048007035966, guid: f37729af10676f240a579f9ba8d2e6f7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8770,7 +8773,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6325602894683309288, guid: da239ded99ccc414aad3714e6a73ddcd, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6325602894683309288, guid: da239ded99ccc414aad3714e6a73ddcd, type: 3}
       propertyPath: m_LocalPosition.x

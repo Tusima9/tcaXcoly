@@ -5,6 +5,7 @@ public class EnemyStat : MonoBehaviour
 {
     [SerializeField] private GameManager GameManager;
     [SerializeField] private EnemyData data;
+    [SerializeField] private int selfNum;
     [SerializeField] private Animator animator;
     [SerializeField] private Slider life;
     [SerializeField] private Text hpText;
@@ -13,6 +14,7 @@ public class EnemyStat : MonoBehaviour
 
     private void Start( )
     {
+        selfNum = transform.GetSiblingIndex( );
         GameManager = FindObjectOfType<GameManager>( );
         animator = GetComponentInChildren<Animator>( );
     }
@@ -55,6 +57,6 @@ public class EnemyStat : MonoBehaviour
 
     private void OnDestroy( )
     {
-        GameManager.EnemyDestroyed( );
+        GameManager.EnemyDestroyed( selfNum );
     }
 }
