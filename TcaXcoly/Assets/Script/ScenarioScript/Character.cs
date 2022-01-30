@@ -91,7 +91,7 @@ public class Character : MonoBehaviour
             case CharacterPosition.Right:
                 _onScreenX = Screen.width * 0.75f;
                 _offScreenX = Screen.width * 1.5f;
-                _onScreenY = Screen.height * 0.25f;
+                _onScreenY = Screen.height * 0.50f;
                 break;
         }
     }

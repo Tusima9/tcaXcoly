@@ -3752,7 +3752,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d9f88229a94073e4cba348f546e8ca7a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 3f0f95cd963b9434785482e4de14e954, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -7576,7 +7576,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Your Fucking Turn
+  m_Text: Your Turn
 --- !u!222 &2013447590
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8381,7 +8381,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8327741276878914370, guid: 6f35b8d162485d647bc8b3caeb4fc612, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.84
+      value: 0.53
       objectReference: {fileID: 0}
     - target: {fileID: 8327741276878914370, guid: 6f35b8d162485d647bc8b3caeb4fc612, type: 3}
       propertyPath: m_LocalPosition.z
