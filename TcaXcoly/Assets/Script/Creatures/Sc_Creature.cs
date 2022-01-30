@@ -64,6 +64,8 @@ public abstract class Sc_Creature : MonoBehaviour
         {
             target.ModifyHealth(-calculateDamage);
             target.transform.DOShakePosition(0.1f, 0.8f);
+
+            target.gameObject.GetComponent<EnemyStat>( ).ModifyHealth( -calculateDamage );
         }
         else
         {
