@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72c49e2151fbd95489fca0dd367b6f35, type: 3}
+  m_Name: gaikotu_yami
+  m_EditorClassIdentifier: 
+  name: gaikotu_yami
+  visualObject: {fileID: 8210658706005087948, guid: b6b372b6b2712584a966a43df46ca765, type: 3}
+  portrait: {fileID: -7797762518054931241, guid: 1166d12e3a3a15943bb97eabc8cf2b1d, type: 3}
+  life:
+    myStat: 1
+    currentValue: 0
+    maxValue: 1000
+  statspoints: 10
+  attack:
+    myStat: 3
+    currentValue: 0
+    maxValue: 10
+  defense:
+    myStat: 4
+    currentValue: 0
+    maxValue: 100

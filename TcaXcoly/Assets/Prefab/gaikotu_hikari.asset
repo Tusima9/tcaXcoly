@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72c49e2151fbd95489fca0dd367b6f35, type: 3}
+  m_Name: gaikotu_hikari
+  m_EditorClassIdentifier: 
+  name: gaikotu_hikari
+  visualObject: {fileID: 4637299401302846342, guid: a7d47523b3f757b45bad2f4f1c85103a, type: 3}
+  portrait: {fileID: 21300000, guid: 6429cf87bbe1e014db866a8334fc7a6e, type: 3}
+  life:
+    myStat: 1
+    currentValue: 0
+    maxValue: 1000
+  statspoints: 10
+  attack:
+    myStat: 3
+    currentValue: 0
+    maxValue: 10
+  defense:
+    myStat: 4
+    currentValue: 0
+    maxValue: 100

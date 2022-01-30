@@ -28,6 +28,9 @@ public class InkManager : MonoBehaviour
     private BackgroundManager _backgroundManager;
     private int NextSceneToLoad;
 
+    [SerializeField]
+    private Text _textName;
+
     void Start()
     {
         _characterManager = FindObjectOfType<CharacterManager>();
@@ -70,7 +73,7 @@ public class InkManager : MonoBehaviour
             ApplyStyling();
 
             _textField.text = text; // displays new text
-
+            NameDisplay();
 
         }
         else if (_story.currentChoices.Count > 0)
@@ -159,5 +162,16 @@ public class InkManager : MonoBehaviour
 
         NextSceneToLoad = SceneManager.GetActiveScene().buildIndex + 1;
         SceneManager.LoadScene(NextSceneToLoad);
+    }
+
+    private void NameDisplay()
+    {
+        List<string> tags = _story.currentTags;
+        if (tags.Count > 0)
+        {
+            _textName.text = "<color=white>" + tags[0] + "</color>";
+        }
+        
+        
     }
 }

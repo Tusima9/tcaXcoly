@@ -75,15 +75,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   colorSprites:
   - color: 0
-    sprite: {fileID: -3764606112446205402, guid: b791b002ce6432440a190855effbe1b0, type: 3}
+    sprite: {fileID: 21300000, guid: 3bde19901efa1ee4680446003bc34b83, type: 3}
+    Damage: 0
   - color: 1
-    sprite: {fileID: 2334058370391378245, guid: b791b002ce6432440a190855effbe1b0, type: 3}
+    sprite: {fileID: 21300000, guid: 28b6959c1b026cf48a366ec6a5afafe0, type: 3}
+    Damage: 0
   - color: 2
-    sprite: {fileID: -2318465335023300856, guid: b791b002ce6432440a190855effbe1b0, type: 3}
+    sprite: {fileID: 21300000, guid: aab5d164e58eb7b48a9ac7603eb0f6d9, type: 3}
+    Damage: 0
   - color: 3
-    sprite: {fileID: -594768970013472418, guid: b791b002ce6432440a190855effbe1b0, type: 3}
+    sprite: {fileID: 21300000, guid: d7e2b48dc25a5b94987b2cafa46d9772, type: 3}
+    Damage: 0
   - color: 4
-    sprite: {fileID: 4037032431678940811, guid: b791b002ce6432440a190855effbe1b0, type: 3}
+    sprite: {fileID: 21300000, guid: c9b7ca92f1b06774cb6f5067acecf2d1, type: 3}
+    Damage: 0
 --- !u!61 &915257772
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -108,7 +113,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 12, y: 12}
+  m_Size: {x: 5.52, y: 5.52}
   m_EdgeRadius: 0
 --- !u!95 &4697063325486752877
 Animator:
@@ -213,7 +218,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 4037032431678940811, guid: b791b002ce6432440a190855effbe1b0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c9b7ca92f1b06774cb6f5067acecf2d1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

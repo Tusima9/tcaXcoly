@@ -15,6 +15,7 @@ public class Character : MonoBehaviour
 
     private float _offScreenX;
     private float _onScreenX;
+    private float _onScreenY;
 
     private readonly float _animationSpeed = 0.5f;
 
@@ -42,7 +43,12 @@ public class Character : MonoBehaviour
         {
             IsShowing = true;
         });
+        LeanTween.moveY(gameObject, _onScreenY, _animationSpeed).setEase(LeanTweenType.linear).setOnComplete(() =>
+        {
+            IsShowing = true;
+        });
     }
+
     public void Hide()
     {
         LeanTween.moveX(gameObject, _offScreenX, _animationSpeed).setEase(LeanTweenType.linear).setOnComplete(() =>
@@ -65,22 +71,27 @@ public class Character : MonoBehaviour
         image.sprite = sprite;
         image.preserveAspect = true;
     }
-    
+
     private void SetAnimationValues()
     {
         switch (Position)
         {
             case CharacterPosition.Left:
-                _onScreenX = Screen.width * 0.1f;
-                _offScreenX = -Screen.width * 0.25f;
+                _onScreenX = Screen.width * 0.2f;
+                _offScreenX = -Screen.width * 0.5f;
+                _onScreenY = Screen.width * 0.35f;
                 break;
+
             case CharacterPosition.Center:
                 _onScreenX = Screen.width * 0.5f;
-                _offScreenX = -Screen.width * 0.25f;
+                _offScreenX = -Screen.width * 0.5f;
+                _onScreenY = Screen.height * 0.25f;
                 break;
+
             case CharacterPosition.Right:
-                _onScreenX = Screen.width * 0.90f;
-                _offScreenX = Screen.width * 1.25f;
+                _onScreenX = Screen.width * 0.75f;
+                _offScreenX = Screen.width * 1.5f;
+                _onScreenY = Screen.height * 0.25f;
                 break;
         }
     }
