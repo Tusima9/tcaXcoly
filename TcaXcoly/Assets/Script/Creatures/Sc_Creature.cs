@@ -48,17 +48,18 @@ public abstract class Sc_Creature : MonoBehaviour
         return allPoints[statName];
     }
 
-    public virtual void StartAttack(Sc_Creature target)
+    public virtual void StartAttack(Sc_Creature target, float attackDamage)
     {
-        StartCoroutine(Attack(target));
+        StartCoroutine( Attack( target, attackDamage ) );
     }
 
-    private IEnumerator Attack(Sc_Creature target)
+    private IEnumerator Attack(Sc_Creature target, float attackDamage )
     {
         yield return new WaitForSeconds(1);
         anim.SetTrigger("Attack");
         yield return new WaitForSeconds(0.1f);
-        float calculateDamage = GetAttack.Value - target.GetDefense.Value;
+
+        float calculateDamage = attackDamage;
         if (calculateDamage > 0)
         {
             target.ModifyHealth(-calculateDamage);

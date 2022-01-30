@@ -34,6 +34,9 @@ public class GameManager : MonoBehaviour
     private Image screen;
     private Text text;
 
+    //change it to type later
+    [SerializeField] List<int> matchesList = new List<int>( );
+
     private void Awake()
     {
         currentPlayers = FindObjectOfType<Sc_Player>();
@@ -113,19 +116,49 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(delay);
 
         float wait = 3f;
-        firstOpponent.StartAttack(secondOpponent);
+
+        Debug.Log( "StartCalculate" );
+        float playerDmg = firstOpponent.GetAttack.Value;
+        float puzzleBonus = 1.1f;
+        //get list to calculate
+        for( int i = 0; i < matchesList.Count; i++ )
+        {
+            //caution -> no type now
+            puzzleBonus += 0.1f;
+        }
+
+        float typeBonus = 1;
+        //caution -> no type now
+
+        Debug.Log( playerDmg + " " + puzzleBonus + " " + typeBonus );
+
+        playerDmg = playerDmg * puzzleBonus * typeBonus;
+        firstOpponent.StartAttack(secondOpponent, playerDmg );
         yield return new WaitForSeconds(wait);
+
         if (!secondOpponent.isDead)
         {
             if (currentEnemys.TurnLeftBeforeAction <= 0)
             {
-                secondOpponent.StartAttack(firstOpponent);
+                float enemyDmg = secondOpponent.GetAttack.Value - firstOpponent.GetDefense.Value;
+                secondOpponent.StartAttack( firstOpponent, enemyDmg );
             }
             yield return new WaitForSeconds(wait);
         }
+
         yourTurn.DOFade(0, delay - 0.3f);
         yourTurn.transform.DOScale(baseScale, 0).SetDelay(delay - 0.3f);
         yield return new WaitForSeconds(delay - 0.3f);
         canPlay = true;
+    }
+
+    public void AddToMatchesList( int type )
+    {
+        matchesList.Add( type );
+    }
+
+    public void ClearMatchesList( )
+    {
+        matchesList.Clear( );
     }
 }
