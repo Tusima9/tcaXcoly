@@ -43,12 +43,19 @@ public class StageDataJsonReader : MonoBehaviour
 
     public void RequestData( int gameid, int waveNum )
     {
-        for( int i = 0; i < stageData.games[gameid].waveLists[0].enemyData.Length; i++ )
+        for( int i = 0; i < 3; i++ )
         {
-            EnemyData tempEnemy = stageData.games[gameid].waveLists[0].enemyData[i];
-            EnemyDataManager.SetEnemyData( i,
-                                           tempEnemy.spriteId, tempEnemy.enemyHp,
-                                           tempEnemy.enemyAttack, tempEnemy.enemyDefense );
+            if( i < stageData.games[gameid].waveLists[0].enemyData.Length )
+            {
+                EnemyData tempEnemy = stageData.games[gameid].waveLists[0].enemyData[i];
+                EnemyDataManager.SetEnemyData( i,
+                                               tempEnemy.spriteId, tempEnemy.enemyHp,
+                                               tempEnemy.enemyAttack, tempEnemy.enemyDefense );
+            }
+            else
+            {
+                EnemyDataManager.DeactivateEnemy( i );
+            }
         }
     }
 }
