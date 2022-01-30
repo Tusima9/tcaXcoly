@@ -3,6 +3,7 @@ using UnityEngine.UI;
 
 public class EnemyStat : MonoBehaviour
 {
+    [SerializeField] private GameManager GameManager;
     [SerializeField] private EnemyData data;
     [SerializeField] private Animator animator;
     [SerializeField] private Slider life;
@@ -12,6 +13,7 @@ public class EnemyStat : MonoBehaviour
 
     private void Start( )
     {
+        GameManager = FindObjectOfType<GameManager>( );
         animator = GetComponentInChildren<Animator>( );
     }
 
@@ -49,5 +51,10 @@ public class EnemyStat : MonoBehaviour
         fill.color = gradient.Evaluate(life.normalizedValue);
         fill.color = gradient.Evaluate(1f);
         hpText.text = data.enemyHp.ToString( );
+    }
+
+    private void OnDestroy( )
+    {
+        GameManager.EnemyDestroyed( );
     }
 }

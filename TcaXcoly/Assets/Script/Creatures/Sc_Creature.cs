@@ -30,7 +30,9 @@ public abstract class Sc_Creature : MonoBehaviour
 
     public virtual void Awake()
     {
-        GameObject newSprite = Instantiate(profile.visualObject, transform.position, transform.rotation, transform);
+        Vector3 pos = new Vector3( transform.position.x + 0.3f, transform.position.y - 0.05f, transform.position.y );
+
+        GameObject newSprite = Instantiate( profile.visualObject, pos, transform.rotation, transform );
         anim = newSprite.GetComponent<Animator>();
         initPos = transform.position;
         foreach (var item in myPoints)
@@ -87,9 +89,7 @@ public abstract class Sc_Creature : MonoBehaviour
     }
 
     public virtual void Death()
-    {
-        
-        
+    { 
         isDead = true;
         anim.SetBool("isDead", isDead);
     }

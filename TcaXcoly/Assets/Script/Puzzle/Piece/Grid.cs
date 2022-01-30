@@ -87,11 +87,6 @@ public class Grid : MonoBehaviour
         Sc_EventManager.instance.onUpdateStats.Invoke();
     }
 
-    // Update is called once per frame
-    private void Update()
-    {
-    }
-
     public IEnumerator Fill()
     {
         bool needsRefill = true;

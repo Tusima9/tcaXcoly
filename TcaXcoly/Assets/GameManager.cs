@@ -7,19 +7,17 @@ using DG.Tweening;
 public class GameManager : MonoBehaviour
 {
     private Sc_Player currentPlayers;
-    private Sc_Enemy currentEnemys;
+
+    [SerializeField] private Sc_Enemy[] currentEnemies;
+    [SerializeField] private Sc_Enemy target;
+    [SerializeField] private Transform targetFrame;
+    [SerializeField] private Vector3[] framePos;
 
     [SerializeField] private int maxActions = 1;
     private int remainingActions;
 
     [SerializeField]
-    public Text displayActions;
-
-    [SerializeField]
-    public Text displayActions2;
-
-    [SerializeField]
-    public Text displayActions3;
+    public Text[] displayActions;
 
     [SerializeField]
     public CanvasGroup yourTurn;
@@ -40,11 +38,16 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         currentPlayers = FindObjectOfType<Sc_Player>();
-        currentEnemys = FindObjectOfType<Sc_Enemy>();
+        target = currentEnemies[1];
+        ChangeTargetFramePos( 1 );
+
         remainingActions = maxActions;
-        displayActions.text = currentEnemys.TurnLeftBeforeAction + "";
-        displayActions2.text = currentEnemys.TurnLeftBeforeAction + "";
-        displayActions3.text = currentEnemys.TurnLeftBeforeAction + "";
+
+        for(int i=0;i<3;i++ )
+        {
+            displayActions[i].text = currentEnemies[i].TurnLeftBeforeAction + "";
+        }
+
         yourTurn.DOFade(0, 0);
 
         screen = endScreen.GetComponentInChildren<Image>();
@@ -96,13 +99,17 @@ public class GameManager : MonoBehaviour
         if (remainingActions <= 0)
         {
             remainingActions = maxActions;
-            remainingActions = currentEnemys.TurnLeftBeforeAction;
-            StartCoroutine(LaunchTurn(currentPlayers, currentEnemys));
+            remainingActions = target.TurnLeftBeforeAction;
+            StartCoroutine(LaunchTurn(currentPlayers, target));
         }
 
-        displayActions.text = remainingActions + "";
-        displayActions2.text = remainingActions + "";
-        displayActions3.text = remainingActions + "";
+        for( int i = 0; i < 3; i++ )
+        {
+            if(displayActions[i].text != null)
+            {
+                displayActions[i].text = currentEnemies[i].TurnLeftBeforeAction + "";
+            }
+        }
     }
 
     public IEnumerator LaunchTurn(Sc_Player firstOpponent, Sc_Enemy secondOpponent)
@@ -138,7 +145,7 @@ public class GameManager : MonoBehaviour
 
         if (!secondOpponent.isDead)
         {
-            if (currentEnemys.TurnLeftBeforeAction <= 0)
+            if (target.TurnLeftBeforeAction <= 0)
             {
                 float enemyDmg = secondOpponent.GetAttack.Value - firstOpponent.GetDefense.Value;
                 secondOpponent.StartAttack( firstOpponent, enemyDmg );
@@ -164,5 +171,35 @@ public class GameManager : MonoBehaviour
     public void ClearMatchesList( )
     {
         matchesList.Clear( );
+    }
+
+    public void ChangeTargetEnemy( int index )
+    {
+        index -= 1;
+        target = currentEnemies[index];
+        Debug.Log( "Current Target: " + index + target );
+        ChangeTargetFramePos( index );
+    }
+
+    private void ChangeTargetFramePos( int index )
+    {
+        targetFrame.localPosition = framePos[index];
+    }
+
+    public void EnemyDestroyed( )
+    {
+        target = null;
+
+        for( int i = 0; i < 3; i++ )
+        {
+            if( currentEnemies[i] != null)
+            {
+                target = currentEnemies[i];
+                ChangeTargetFramePos( i );
+                return;
+            }
+        }
+
+        //to next wave or finish battle
     }
 }
