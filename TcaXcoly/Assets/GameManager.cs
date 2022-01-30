@@ -212,20 +212,22 @@ public class GameManager : MonoBehaviour
 
         Debug.Log( "All Destroyed" );
 
-        if( jsonReader.GetMaxWave( nowStageId ) > nowWave )
+        if( jsonReader.GetMaxWave( nowStageId ) - 1 > nowWave )
         {
             EnemyStageManager.SetIdWave( nowStageId, nowWave + 1 );
-            StartCoroutine( LoadPuzzleGame( ) );
+            StartCoroutine( LoadScene( 3 ) );
         }
         else
         {
             EnemyStageManager.SetIdWave( nowStageId + 1, 0 );
+            StartCoroutine( LoadScene( 4 ) );
+
         }
     }
 
-    IEnumerator LoadPuzzleGame( )
+    IEnumerator LoadScene( int sceneNum )
     {
-        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync( "Puzzle" );
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync( sceneNum );
         while( !asyncLoad.isDone )
         {
             yield return null;
