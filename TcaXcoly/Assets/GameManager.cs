@@ -145,6 +145,10 @@ public class GameManager : MonoBehaviour
             }
             yield return new WaitForSeconds(wait);
         }
+        if (secondOpponent.isDead)
+        {
+            Destroy(secondOpponent);
+        }
 
         yourTurn.DOFade(0, delay - 0.3f);
         yourTurn.transform.DOScale(baseScale, 0).SetDelay(delay - 0.3f);
