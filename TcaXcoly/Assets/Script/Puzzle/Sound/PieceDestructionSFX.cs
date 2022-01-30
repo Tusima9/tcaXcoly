@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-namespace Assets.Scripts.Puzzle.Sound
-{
+
     [RequireComponent(typeof(AudioSource))]
 public class PieceDestructionSFX : MonoBehaviour
 {
@@ -40,4 +39,4 @@ public class PieceDestructionSFX : MonoBehaviour
 
     }
 
-}
+

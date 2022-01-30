@@ -25,8 +25,5 @@ public class Sc_Enemy : Sc_Creature
         base.StartAttack(target, attackDamage );
     }
 
-    public override void Death()
-    {
-        base.Death();
-    }
+    
 }

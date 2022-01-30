@@ -160,7 +160,7 @@ public class InkManager1 : MonoBehaviour
     public void NextScene()
     {
 
-        NextSceneToLoad = SceneManager.GetActiveScene().buildIndex - 3;
+        NextSceneToLoad = SceneManager.GetActiveScene().buildIndex - 2;
         SceneManager.LoadScene(NextSceneToLoad);
     }
 

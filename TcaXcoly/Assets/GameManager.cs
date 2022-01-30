@@ -113,7 +113,7 @@ public class GameManager : MonoBehaviour
 
         for( int i = 0; i < 3; i++ )
         {
-            if(displayActions[i].text != null)
+            if(displayActions[i] != null)
             {
                 displayActions[i].text = currentEnemies[i].TurnLeftBeforeAction + "";
             }
@@ -214,6 +214,7 @@ public class GameManager : MonoBehaviour
 
         if( jsonReader.GetMaxWave( nowStageId ) - 1 > nowWave )
         {
+            SoundSystem.instance.PlayBossBGM();
             EnemyStageManager.SetIdWave( nowStageId, nowWave + 1 );
             StartCoroutine( LoadScene( 3 ) );
         }
@@ -221,6 +222,7 @@ public class GameManager : MonoBehaviour
         {
             EnemyStageManager.SetIdWave( nowStageId + 1, 0 );
             StartCoroutine( LoadScene( 4 ) );
+            
 
         }
     }

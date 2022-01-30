@@ -2,9 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Assets.Scripts.Puzzle.Sound
-{
-    //sound in minigame
+
 public class SoundSystem : MonoBehaviour
 {
         public static SoundSystem instance;
@@ -115,4 +113,3 @@ public class SoundSystem : MonoBehaviour
 
 
     }
-}

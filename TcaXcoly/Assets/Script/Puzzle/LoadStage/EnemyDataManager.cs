@@ -20,6 +20,7 @@ public class EnemyDataManager : MonoBehaviour
         enemies[index].SetData( name, id, hp, atk, def );
         enemies[index].gameObject.SetActive( true );
         enemies[index].transform.GetChild( 1 ).GetComponent<SpriteRenderer>( ).sprite = enemyImages[id];
+        
     }
 
     public void DeactivateEnemy( int pos )

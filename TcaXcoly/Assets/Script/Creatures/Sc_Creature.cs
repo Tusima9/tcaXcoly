@@ -64,7 +64,7 @@ public abstract class Sc_Creature : MonoBehaviour
         float calculateDamage = attackDamage;
         if (calculateDamage > 0)
         {
-            target.ModifyHealth(-calculateDamage);
+           
             target.transform.DOShakePosition(0.1f, 0.8f);
 
             target.gameObject.GetComponent<EnemyStat>( ).ModifyHealth( -calculateDamage );
@@ -78,19 +78,7 @@ public abstract class Sc_Creature : MonoBehaviour
         transform.DOMoveX(initPos.x, animSpeed);
     }
 
-    private void ModifyHealth(float value)
-    {
-        GetLife.ModifyValue(value);
+  
 
-        if (GetLife.Value <= 0)
-        {
-            Death();
-        }
-    }
-
-    public virtual void Death()
-    { 
-        isDead = true;
-        anim.SetBool("isDead", isDead);
-    }
+    
 }

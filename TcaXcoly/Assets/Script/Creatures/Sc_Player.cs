@@ -26,9 +26,5 @@ public class Sc_Player : Sc_Creature
         base.StartAttack(target, attackDamage);
     }
 
-    public override void Death()
-    {
-        base.Death();
-        Sc_EventManager.instance.onWin.Invoke(false);
-    }
+   
 }

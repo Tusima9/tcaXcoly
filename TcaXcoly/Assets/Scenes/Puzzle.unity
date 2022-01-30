@@ -142,10 +142,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameManager: {fileID: 0}
   data:
+    spriteId: 
     enemyId: 0
     enemyHp: 0
     enemyAttack: 0
-    enemyDefense: 0
+    enemyDefence: 0
   selfNum: 0
   animator: {fileID: 0}
   life: {fileID: 772698280}
@@ -199,10 +200,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameManager: {fileID: 0}
   data:
+    spriteId: 
     enemyId: 0
     enemyHp: 0
     enemyAttack: 0
-    enemyDefense: 0
+    enemyDefence: 0
   selfNum: 0
   animator: {fileID: 0}
   life: {fileID: 1715287670}
@@ -986,7 +988,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 50eaa53c50e53214ba88c4dab6104351, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 0ba6ef1638d3a4bea93b34bbef0a123c, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1959,7 +1961,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 68b8d4fb53b0ec24dbaca4357b43442f, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 19f89c6e740e7447f9e12a8310d3e973, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -3026,9 +3028,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 266032fc0ec153b46872e5c3585a7583, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 52320e590bf774734a288886eba557ba, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.12
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3514,9 +3516,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 5a30e53b10b5c1d48890149c19c02674, type: 3}
+  m_audioClip: {fileID: 8300000, guid: fe0b1f9aeb45b41b089175aeeabd5d95, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.64
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3948,7 +3950,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3f0f95cd963b9434785482e4de14e954, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 41bba495785a1ca488317dc7c6075b21, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -6032,10 +6034,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   GameManager: {fileID: 0}
   data:
+    spriteId: 
     enemyId: 0
     enemyHp: 0
     enemyAttack: 0
-    enemyDefense: 0
+    enemyDefence: 0
   selfNum: 0
   animator: {fileID: 0}
   life: {fileID: 1363701511}

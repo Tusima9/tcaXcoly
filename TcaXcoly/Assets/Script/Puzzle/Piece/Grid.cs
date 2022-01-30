@@ -257,6 +257,7 @@ public class Grid : MonoBehaviour
 
                 piece1.MovableComponent.Move(piece2.X, piece2.Y, fillTime);
                 piece2.MovableComponent.Move(piece1X, piece1Y, fillTime);
+                SoundSystem.instance.PlayMovementSFX();
 
                 ClearAllValidMatches();
 
@@ -605,7 +606,7 @@ public class Grid : MonoBehaviour
             pieces[x, y].ClearableComponent.Clear();
 
             SpawnNewPiece(x, y, PieceType.EMPTY);
-
+            SoundSystem.instance.PlayMatchSFX(1, 0.2f);
             return true;
         }
 
