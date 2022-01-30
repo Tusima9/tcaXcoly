@@ -7108,6 +7108,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1882633811}
   - component: {fileID: 1882633812}
+  - component: {fileID: 1882633813}
   m_Layer: 0
   m_Name: StageManager
   m_TagString: Untagged
@@ -7143,6 +7144,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameDataJson: {fileID: 4900000, guid: 321d7bb766eb78e45ba5d253a7753748, type: 3}
   EnemyDataManager: {fileID: 1927605322}
+--- !u!114 &1882633813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1882633810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a09499493c41a334693c7eb54f78b834, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1895393779
 GameObject:
   m_ObjectHideFlags: 0
