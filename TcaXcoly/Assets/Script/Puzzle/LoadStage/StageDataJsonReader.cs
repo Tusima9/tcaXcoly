@@ -45,9 +45,9 @@ public class StageDataJsonReader : MonoBehaviour
     {
         for( int i = 0; i < 3; i++ )
         {
-            if( i < stageData.games[gameid].waveLists[0].enemyData.Length )
+            if( i < stageData.games[gameid].waveLists[waveNum].enemyData.Length )
             {
-                EnemyData tempEnemy = stageData.games[gameid].waveLists[0].enemyData[i];
+                EnemyData tempEnemy = stageData.games[gameid].waveLists[waveNum].enemyData[i];
                 EnemyDataManager.SetEnemyData( i,
                                                tempEnemy.spriteId, tempEnemy.enemyHp,
                                                tempEnemy.enemyAttack, tempEnemy.enemyDefense );
@@ -57,5 +57,10 @@ public class StageDataJsonReader : MonoBehaviour
                 EnemyDataManager.DeactivateEnemy( i );
             }
         }
+    }
+
+    public int GetMaxWave( int id )
+    {
+        return stageData.games[id].waveLists.Length;
     }
 }

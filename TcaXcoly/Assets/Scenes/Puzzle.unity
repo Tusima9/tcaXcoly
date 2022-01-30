@@ -2380,7 +2380,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &477218830
 Transform:
   m_ObjectHideFlags: 0
@@ -6614,6 +6614,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5443430e21c32246b6f6fc497616520, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jsonReader: {fileID: 1882633812}
+  nowStageId: 0
+  nowWave: 0
   currentEnemies:
   - {fileID: 1697296393}
   - {fileID: 1059650365}
@@ -7457,6 +7460,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c90a3d57f23d347a5965730c964e80e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stageId: 0
+  wave: 0
   StageDataJsonReader: {fileID: 1882633812}
   enemies:
   - {fileID: 56294185}
@@ -8385,6 +8390,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Minion3
       objectReference: {fileID: 0}
+    - target: {fileID: 282055096720131095, guid: e13949d95d425b44fb19aa5071b392c8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 676466069304678386, guid: e13949d95d425b44fb19aa5071b392c8, type: 3}
       propertyPath: myPoints.Array.size
       value: 6
@@ -8503,11 +8512,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5682246163444175140, guid: e13949d95d425b44fb19aa5071b392c8, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5682246163444175140, guid: e13949d95d425b44fb19aa5071b392c8, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5946914180173463031, guid: e13949d95d425b44fb19aa5071b392c8, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -8525,15 +8534,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 586757149967306109, guid: f37729af10676f240a579f9ba8d2e6f7, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 586757149967306109, guid: f37729af10676f240a579f9ba8d2e6f7, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1425008363167983912, guid: f37729af10676f240a579f9ba8d2e6f7, type: 3}
       propertyPath: m_Name
       value: Minion1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1425008363167983912, guid: f37729af10676f240a579f9ba8d2e6f7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2527013048007035966, guid: f37729af10676f240a579f9ba8d2e6f7, type: 3}
       propertyPath: m_RootOrder
@@ -8729,11 +8742,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2071502425103027601, guid: da239ded99ccc414aad3714e6a73ddcd, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2071502425103027601, guid: da239ded99ccc414aad3714e6a73ddcd, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2445689603368600470, guid: da239ded99ccc414aad3714e6a73ddcd, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -8742,6 +8755,10 @@ PrefabInstance:
     - target: {fileID: 4543611306438810808, guid: da239ded99ccc414aad3714e6a73ddcd, type: 3}
       propertyPath: m_Name
       value: Minion2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4543611306438810808, guid: da239ded99ccc414aad3714e6a73ddcd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6325602894400622460, guid: da239ded99ccc414aad3714e6a73ddcd, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size

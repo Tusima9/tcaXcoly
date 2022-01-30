@@ -8,6 +8,9 @@ namespace Assets.Script.MemberSelection
     {
         public void onClick()
         {
+            //change it later!!!!
+            EnemyStageManager.SetIdWave( 0, 0 );
+
             if (Coordinator.TeamManager.GetMembers().Count!=0)
             {
                 StartCoroutine(LoadPuzzleGame());

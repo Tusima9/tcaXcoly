@@ -3,10 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     private Sc_Player currentPlayers;
+
+    [SerializeField] private StageDataJsonReader jsonReader;
+    [SerializeField] private int nowStageId;
+    [SerializeField] private int nowWave;
 
     [SerializeField] private Sc_Enemy[] currentEnemies;
     [SerializeField] private Sc_Enemy target;
@@ -37,9 +42,12 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
+        nowStageId = EnemyStageManager.GetStageId( );
+        nowWave = EnemyStageManager.GetNowWave( );
+
         currentPlayers = FindObjectOfType<Sc_Player>();
-        target = currentEnemies[1];
-        ChangeTargetFramePos( 1 );
+        target = currentEnemies[0];
+        ChangeTargetFramePos( 0 );
 
         remainingActions = maxActions;
 
@@ -183,6 +191,7 @@ public class GameManager : MonoBehaviour
     private void ChangeTargetFramePos( int index )
     {
         targetFrame.localPosition = framePos[index];
+        targetFrame.gameObject.SetActive( true );
     }
 
     public void EnemyDestroyed( int index )
@@ -202,6 +211,24 @@ public class GameManager : MonoBehaviour
         }
 
         Debug.Log( "All Destroyed" );
-        //to next wave or finish battle
+
+        if( jsonReader.GetMaxWave( nowStageId ) > nowWave )
+        {
+            EnemyStageManager.SetIdWave( nowStageId, nowWave + 1 );
+            StartCoroutine( LoadPuzzleGame( ) );
+        }
+        else
+        {
+            EnemyStageManager.SetIdWave( nowStageId + 1, 0 );
+        }
+    }
+
+    IEnumerator LoadPuzzleGame( )
+    {
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync( "Puzzle" );
+        while( !asyncLoad.isDone )
+        {
+            yield return null;
+        }
     }
 }
