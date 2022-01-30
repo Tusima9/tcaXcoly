@@ -15,3 +15,16 @@ hp=0の時に敵が消えないので、他の敵をターゲットにできな�
 ステージが生成されない。
 ストーリー未実装
 スキルがない。
+
+
+
+
+
+
+
+assets
+The Northern Path by Alexander Nakarada | https://www.serpentsoundstudios.com
+Music promoted by https://www.chosic.com/free-music/all/
+Creative Commons CC BY 4.0
+https://creativecommons.org/licenses/by/4.0/
+ 
