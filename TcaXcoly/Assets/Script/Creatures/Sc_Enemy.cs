@@ -20,10 +20,10 @@ public class Sc_Enemy : Sc_Creature
         }
     }
 
-    public override void StartAttack(Sc_Creature target)
+    public override void StartAttack(Sc_Creature target, float attackDamage)
     {
         transform.DOMoveX(initPos.x - 1, animSpeed);
-        base.StartAttack(target);
+        base.StartAttack(target, attackDamage );
     }
 
     public override void Death()

@@ -1,0 +1,15 @@
+
+"characters":[
+    {
+        "uuid":"noctania_virus"
+        "skillUUID":"noctania_sk1"
+    },
+    {
+        "uuid":"main_character"
+        "skillUUID":"main_sk1"
+    },
+    {
+        "uuid":"jackleap_alter"
+        "skillUUID":"jackleap_sk1"
+    },
+]

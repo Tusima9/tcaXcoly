@@ -108,6 +108,7 @@ public class Grid : MonoBehaviour
 
             needsRefill = ClearAllValidMatches();
         }
+
     }
 
     public bool FillStep()
@@ -245,6 +246,7 @@ public class Grid : MonoBehaviour
 
     public void SwapPieces(GamePieces piece1, GamePieces piece2)
     {
+        gameManager.ClearMatchesList( );
         canSwap = false;
         Sc_EventManager.instance.onUpdateStats.Invoke();
         gameManager.ChangeAction(-1);
@@ -353,6 +355,9 @@ public class Grid : MonoBehaviour
                 {
                     matchingPieces.Add(horizontalPieces[i]);
                 }
+
+                //add to game manager list
+                gameManager.AddToMatchesList( 0 );
             }
 
             // Traverse vertically if we found a match (for L and T shapes)
@@ -402,6 +407,9 @@ public class Grid : MonoBehaviour
                         {
                             matchingPieces.Add(verticalPieces[j]);
                         }
+
+                        //add to game manager list
+                        gameManager.AddToMatchesList( 0 );
 
                         break;
                     }
@@ -457,6 +465,9 @@ public class Grid : MonoBehaviour
                 {
                     matchingPieces.Add(verticalPieces[i]);
                 }
+
+                //add to game manager list
+                gameManager.AddToMatchesList( 0 );
             }
 
             // Traverse horizontally if we found a match (for L and T shapes)
@@ -506,6 +517,9 @@ public class Grid : MonoBehaviour
                         {
                             matchingPieces.Add(horizontalPieces[j]);
                         }
+
+                        //add to game manager list
+                        gameManager.AddToMatchesList( 0 );
 
                         break;
                     }
