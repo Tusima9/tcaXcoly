@@ -22,7 +22,7 @@ hp=0の時に敵が消えないので、他の敵をターゲットにできな�
 
 
 
-assets
+assets BGM:
 The Northern Path by Alexander Nakarada | https://www.serpentsoundstudios.com
 Music promoted by https://www.chosic.com/free-music/all/
 Creative Commons CC BY 4.0
