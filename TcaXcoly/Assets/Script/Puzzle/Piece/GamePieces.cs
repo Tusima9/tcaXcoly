@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 
 public class GamePieces : MonoBehaviour
@@ -6,6 +5,7 @@ public class GamePieces : MonoBehaviour
 	private int x;
 	private int y;
 	//private int DamageValue = 10;
+	
 
 	public int X
 	{
@@ -103,6 +103,8 @@ public class GamePieces : MonoBehaviour
 	void OnMouseDown()
 	{
 		grid.PressPiece(this);
+		SoundSystem.instance.PlayTapSFX();
+		
 	}
 
 	void OnMouseUp()
@@ -123,5 +125,6 @@ public class GamePieces : MonoBehaviour
 	public bool IsClearable()
 	{
 		return clearableComponent != null;
+		
 	}
 }

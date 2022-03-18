@@ -3,7 +3,9 @@ using UnityEngine.UI;
 
 public class EnemyStat : MonoBehaviour
 {
+    [SerializeField] private GameManager GameManager;
     [SerializeField] private EnemyData data;
+    [SerializeField] private int selfNum;
     [SerializeField] private Animator animator;
     [SerializeField] private Slider life;
     [SerializeField] private Text hpText;
@@ -12,15 +14,18 @@ public class EnemyStat : MonoBehaviour
 
     private void Start( )
     {
+        selfNum = transform.GetSiblingIndex( );
+        GameManager = FindObjectOfType<GameManager>( );
         animator = GetComponentInChildren<Animator>( );
     }
 
-    public void SetData( string name, float hp, int atk, int def )
+    public void SetData( string name, int id, float hp, int atk, int def )
     {
         data.spriteId = name;
+        data.enemyId = id;
         data.enemyHp = hp;
         data.enemyAttack = atk;
-        data.enemyDefense = def;
+        data.enemyDefence = def;
 
         life.maxValue = hp;
 
@@ -49,5 +54,10 @@ public class EnemyStat : MonoBehaviour
         fill.color = gradient.Evaluate(life.normalizedValue);
         fill.color = gradient.Evaluate(1f);
         hpText.text = data.enemyHp.ToString( );
+    }
+
+    private void OnDestroy( )
+    {
+        GameManager.EnemyDestroyed( selfNum );
     }
 }

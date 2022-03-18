@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 
@@ -9,6 +7,7 @@ public class Sc_Enemy : Sc_Creature
     public int TurnLeftBeforeAction;
 
     private EnemyProfile myProfile => profile as EnemyProfile;
+
 
     public override void Awake()
     {
@@ -26,8 +25,5 @@ public class Sc_Enemy : Sc_Creature
         base.StartAttack(target, attackDamage );
     }
 
-    public override void Death()
-    {
-        base.Death();
-    }
+    
 }

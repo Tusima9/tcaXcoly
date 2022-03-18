@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6ab7c24e658d6345811f2c76bdd7cda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  healthBar: {fileID: 0}
   profile: {fileID: 11400000, guid: 0b1d89d41b31fe64b85e927fe2813b38, type: 2}
   animSpeed: 0.4
   myPoints:
@@ -635,7 +636,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -714.8, y: 68}
+  m_AnchoredPosition: {x: -664.8, y: 68}
   m_SizeDelta: {x: 106.3, y: 110.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4158266730569245

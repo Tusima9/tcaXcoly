@@ -9,19 +9,22 @@
 					"enemyData":[
 					{
 							"spriteId":"gaikotu_honoo",
-							"enemyHp":1000,
+							"enemyId": 0,
+							"enemyHp":500,
 							"enemyAttack":10,
 							"enemyDefence":100
 					},
 					{
 							"spriteId":"gaikotu_mizu",
-							"enemyHp":1000,
+							"enemyId": 1,
+							"enemyHp":500,
 							"enemyAttack":10,
 							"enemyDefence":100
 					},
 					{
 							"spriteId":"gaikotu_kaze",
-							"enemyHp":1000,
+							"enemyId": 2,
+							"enemyHp":500,
 							"enemyAttack":10,
 							"enemyDefence":100
 					}]
@@ -31,7 +34,8 @@
 					[
 					{
 						"spriteId":"kyoudaigaikotu_boss",
-						"enemyHp":2000,
+						"enemyId": 3,
+						"enemyHp":1000,
 						"enemyAttack":50,
 						"enemyDefence":200
 					}]
