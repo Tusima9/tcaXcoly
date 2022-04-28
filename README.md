@@ -28,7 +28,7 @@ Bug！！！！！！！
 スキルがない。
 
 
-build -> https://drive.google.com/drive/folders/12cgJxa1gCwrlZrkNfVMMI5RNu7LygmJg
+build -> https://drive.google.com/drive/folders/12cgJxa1gCwrlZrkNfVMMI5RNu7LygmJg?usp=sharing
 
 
 
