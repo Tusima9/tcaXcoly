@@ -11,6 +11,7 @@ public class EnemyBase : MonoBehaviour
         selfNum = transform.parent.GetSiblingIndex( );
     }
 
+    //ターゲット変更
     private void OnMouseDown( )
     {
         GameManager.ChangeTargetEnemy( selfNum );

@@ -132,25 +132,34 @@ public class GameManager : MonoBehaviour
 
         float wait = 3f;
 
+        //計算開始
         Debug.Log( "StartCalculate" );
+
+        //playerのダメージを取得
         float playerDmg = firstOpponent.GetAttack.Value;
         float puzzleBonus = 1.1f;
-        //get list to calculate
+
+        //caution -> 今はタイプがない
+        float typeBonus = 1;
+
+        //マッチしたリストをゲット
         for( int i = 0; i < matchesList.Count; i++ )
         {
-            //caution -> no type now
+            //タイプ計算もここでする
+            //マッチした数でボーナスが増える
             puzzleBonus += 0.1f;
         }
 
-        float typeBonus = 1;
-        //caution -> no type now
-
         Debug.Log( playerDmg + " " + puzzleBonus + " " + typeBonus );
 
+        //ダメージ計算
         playerDmg = playerDmg * puzzleBonus * typeBonus;
+
+        //攻撃
         firstOpponent.StartAttack(secondOpponent, playerDmg );
         yield return new WaitForSeconds(wait);
 
+        //エネミーが死んでないなら防御を計算
         if (!secondOpponent.isDead)
         {
             if (target.TurnLeftBeforeAction <= 0)
@@ -160,6 +169,8 @@ public class GameManager : MonoBehaviour
             }
             yield return new WaitForSeconds(wait);
         }
+
+        //エネミーが死んだ！
         if (secondOpponent.isDead)
         {
             Destroy(secondOpponent);
@@ -181,6 +192,9 @@ public class GameManager : MonoBehaviour
         matchesList.Clear( );
     }
 
+    /// <summary>
+    /// ターゲットを変更
+    /// </summary>
     public void ChangeTargetEnemy( int index )
     {
         target = currentEnemies[index];
@@ -188,12 +202,14 @@ public class GameManager : MonoBehaviour
         ChangeTargetFramePos( index );
     }
 
+    //ターゲット指定のフレーム位置を変更
     private void ChangeTargetFramePos( int index )
     {
         targetFrame.localPosition = framePos[index];
         targetFrame.gameObject.SetActive( true );
     }
 
+    //Enemyが消したらの処理
     public void EnemyDestroyed( int index )
     {
         currentEnemies[index] = null;
@@ -201,6 +217,7 @@ public class GameManager : MonoBehaviour
 
         for( int i = 0; i < 3; i++ )
         {
+            //ターゲット変更
             if( currentEnemies[i] != null)
             {
                 target = currentEnemies[i];
@@ -210,6 +227,7 @@ public class GameManager : MonoBehaviour
             }
         }
 
+        //現在のエネミーが全部消されたら、次のWaveかステージをロード
         Debug.Log( "All Destroyed" );
 
         if( jsonReader.GetMaxWave( nowStageId ) - 1 > nowWave )

@@ -9,9 +9,11 @@ public class SceneManagerScript : MonoBehaviour
         cameraRightMiddle.z = transform.position.z;
         transform.position = cameraRightMiddle;
     }
-    public void JumpToMain( )
+
+    #region シーンロード
+    public void JumpToTitle( )
     {
-        SceneManager.LoadSceneAsync( 2 );
+        SceneManager.LoadSceneAsync( 0 );
     }
 
     public void JumpToScenario( )
@@ -19,14 +21,15 @@ public class SceneManagerScript : MonoBehaviour
         SceneManager.LoadSceneAsync( 1 );
     }
 
+    public void JumpToMain( )
+    {
+        SceneManager.LoadSceneAsync( 2 );
+    }
+
     public void JumpToPuzzle()
     {
         SceneManager.LoadSceneAsync( 3 );
     }
-
-    public void JumpToTitle( )
-    {
-        SceneManager.LoadSceneAsync( 0 );
-    }
+    #endregion
 
 }

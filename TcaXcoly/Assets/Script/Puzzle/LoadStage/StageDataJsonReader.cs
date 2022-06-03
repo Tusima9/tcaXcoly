@@ -1,5 +1,7 @@
 using UnityEngine;
 
+
+#region jsonを取得するためのClass定義
 public class StageInfo
 {
     public Game[] games;
@@ -28,6 +30,7 @@ public class EnemyData
     public int enemyAttack;
     public int enemyDefence;
 }
+#endregion
 
 
 public class StageDataJsonReader : MonoBehaviour
@@ -37,13 +40,15 @@ public class StageDataJsonReader : MonoBehaviour
 
     private StageInfo stageData;
 
+
     void Awake( )
     {
         stageData = JsonUtility.FromJson<StageInfo>( gameDataJson.text );
 
         foreach( Game info in stageData.games )
         {
-            Debug.Log( "name: " + info.name );
+            //今は1-1をロード＋データ確認
+            Debug.Log("name: " + info.name );
             Debug.Log( "gameId: " + info.gameId );
 
             Debug.Log( "w1-e1-id: " + info.waveLists[0].enemyData[0].spriteId );
@@ -58,8 +63,21 @@ public class StageDataJsonReader : MonoBehaviour
         }
     }
 
-    public void RequestData( int gameid, int waveNum )
+    /// <summary>
+    /// データを取得
+    /// </summary>
+    public bool RequestData( int gameid, int waveNum )
     {
+        if( gameid > stageData.games.Length )
+        {
+            return false;
+        }
+
+        if( waveNum > stageData.games[gameid].waveLists.Length )
+        {
+            return false;
+        }
+
         for( int i = 0; i < 3; i++ )
         {
             if( i < stageData.games[gameid].waveLists[waveNum].enemyData.Length )
@@ -74,8 +92,13 @@ public class StageDataJsonReader : MonoBehaviour
                 EnemyDataManager.DeactivateEnemy( i );
             }
         }
+
+        return true;
     }
 
+    /// <summary>
+    /// 最大Wave数を取得
+    /// </summary>
     public int GetMaxWave( int id )
     {
         return stageData.games[id].waveLists.Length;

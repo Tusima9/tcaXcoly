@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
-using System;
 
 public enum CreatureType
 {
@@ -64,9 +63,8 @@ public abstract class Sc_Creature : MonoBehaviour
         float calculateDamage = attackDamage;
         if (calculateDamage > 0)
         {
-           
             target.transform.DOShakePosition(0.1f, 0.8f);
-
+            //エネミーにダメージ
             target.gameObject.GetComponent<EnemyStat>( ).ModifyHealth( -calculateDamage );
         }
         else

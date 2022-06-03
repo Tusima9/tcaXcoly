@@ -1,5 +1,8 @@
 using UnityEngine;
 
+/// <summary>
+/// Enemy全体のデータコントローラー
+/// </summary>
 public class EnemyDataManager : MonoBehaviour
 {
     [SerializeField] private Sprite[] enemyImages;
@@ -15,6 +18,9 @@ public class EnemyDataManager : MonoBehaviour
         StageDataJsonReader.RequestData( stageId, wave );
     }
 
+    /// <summary>
+    /// 個別のEnemyデータをjsonからセット
+    /// </summary>
     public void SetEnemyData( int index, string name, int id, float hp, int atk, int def )
     {
         enemies[index].SetData( name, id, hp, atk, def );
@@ -23,6 +29,10 @@ public class EnemyDataManager : MonoBehaviour
         
     }
 
+    /// <summary>
+    /// Enemyを消す
+    /// </summary>
+    /// <param name="pos">Enemy番号</param>
     public void DeactivateEnemy( int pos )
     {
         Destroy( enemies[pos].gameObject );

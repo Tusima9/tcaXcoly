@@ -1,3 +1,4 @@
+//Enemyリスト
 public enum EnemyList
 {
     gaikotu_honoo,

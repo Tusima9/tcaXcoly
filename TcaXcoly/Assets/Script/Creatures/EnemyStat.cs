@@ -1,6 +1,9 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+/// <summary>
+/// Enemyの個別コントローラー
+/// </summary>
 public class EnemyStat : MonoBehaviour
 {
     [SerializeField] private GameManager GameManager;
@@ -19,6 +22,9 @@ public class EnemyStat : MonoBehaviour
         animator = GetComponentInChildren<Animator>( );
     }
 
+    /// <summary>
+    /// データを全体コントローラーからセット
+    /// </summary>
     public void SetData( string name, int id, float hp, int atk, int def )
     {
         data.spriteId = name;
@@ -32,6 +38,9 @@ public class EnemyStat : MonoBehaviour
         UpdateSliderValue( );
     }
 
+    /// <summary>
+    /// Healthを変更
+    /// </summary>
     public void ModifyHealth( float value )
     {
         data.enemyHp += value;
@@ -48,6 +57,7 @@ public class EnemyStat : MonoBehaviour
         Debug.Log( "Modified" );
     }
 
+    //ライフバーを更新
     private void UpdateSliderValue( )
     {
         life.value = data.enemyHp;
@@ -56,6 +66,7 @@ public class EnemyStat : MonoBehaviour
         hpText.text = data.enemyHp.ToString( );
     }
 
+    //Game
     private void OnDestroy( )
     {
         GameManager.EnemyDestroyed( selfNum );
